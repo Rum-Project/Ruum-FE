@@ -3,3 +3,14 @@
   color: #ffffff;
   padding: 10px;
 }
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footericon {
+  height: 20px;
+  width: 20px;
+}
