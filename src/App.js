@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Components/Navbar/NavBar";
+import RenterResultsContainer from "./Components/RenterResultsContainer/RetnerResultsContainer"
 import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <p>Hello</p>
-      <p>WORLD</p>
+      <RenterResultsContainer />
       <Footer />
     </div>
   );
