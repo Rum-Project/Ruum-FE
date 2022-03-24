@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Components/Navbar/NavBar";
-import RenterResultsContainer from "./Components/RenterResultsContainer/RetnerResultsContainer"
+import RenterResultsContainer from "./Components/RenterResultsContainer/RenterResultsContainer"
 import Footer from "./Components/Footer/Footer";
 
 function App() {
