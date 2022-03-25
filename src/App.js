@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Components/Navbar/NavBar";
-import RenterResultsContainer from "./Components/RenterResultsContainer/RenterResultsContainer"
+import RenterResultsContainer from "./Components/RenterResultsContainer/RenterResultsContainer";
 import RoomView from "./Components/RoomView/RoomView";
 import Footer from "./Components/Footer/Footer";
 import RenterBookingsContainer from "./Components/RenterBookingsContainer/RenterBookingsContainer";
@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <NavBar />
       {/* <RenterResultsContainer /> */}
-      <RenterBookingsContainer />
-      {/* <RoomView /> */}
+      {/* <RenterBookingsContainer /> */}
+      <RoomView />
       <Footer />
     </div>
   );
