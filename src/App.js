@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/dashboard" render={() => <Dashboard />} />
         <Route
           exact
-          path="/User/:id"
+          path="/profile"
           render={({ match }) => <Profile id={match.params.id} />}
         />
         <Route exact path="/error" component={Error} />
