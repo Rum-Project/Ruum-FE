@@ -89,4 +89,7 @@
     margin-top: 0em;
     margin-bottom: 1.5em;
   }
+  .button-container {
+    align-items: center;
+  }
 }
