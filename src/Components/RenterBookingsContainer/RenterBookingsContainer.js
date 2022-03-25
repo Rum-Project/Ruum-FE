@@ -1,6 +1,5 @@
 import "./RenterBookingsContainer.css";
 import RenterBookingCard from "../RenterBookingCard/RenterBookingCard";
-import ResultsFilterBar from "../ResultsFilterBar/ResultsFilterBar";
 
 const RenterBookingsContainer = () => {
   return (
