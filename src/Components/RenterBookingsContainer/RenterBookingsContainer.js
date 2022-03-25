@@ -6,7 +6,6 @@ import ResultsFilterBar from '../ResultsFilterBar/ResultsFilterBar'
 const RenterBookingsContainer = () => {
   return (
     <div className="results-container">
-      <ResultsFilterBar />
       <h2>Upcoming Bookings:</h2>
       <RenterBookingCard />
       <RenterBookingCard />

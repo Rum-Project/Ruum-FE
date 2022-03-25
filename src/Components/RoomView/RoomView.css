@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: calc(100% - 40px); */
   background-color: #ffffff;
   border-radius: 10px;
   margin: 20px;
@@ -26,7 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-width: 80%;
+  width: 80%;
   padding: 20px 50px 20px 20px;
 }
 
@@ -35,7 +34,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .detailed-view-bottom-info {
@@ -48,10 +46,12 @@
 .detailed-view-amenity-info,
 .detailed-view-ratings-info,
 .detailed-view-available-instruments-info,
-.detailed-view-price-info {
+.detailed-view-price-info,
+.detailed-view-amenity-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0px 20px 20px 0px;
 }
 
 .detailed-view-info-title {
@@ -63,10 +63,10 @@
   padding: 20px 40px;
   border-radius: 10px;
   border: 0px solid #ffffff;
-  filter: drop-shadow(5px 5px 1px #000000dd);
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
+  filter: drop-shadow(2px 2px 1px #000000DD);
 }
 
 p {
@@ -78,3 +78,19 @@ p {
   justify-content: space-between;
   padding-bottom: 50px;
 }
+
+@media screen and (min-device-width: 1px) and (max-device-width: 800px) {
+  .detailed-view-top-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .below-image {
+    flex-direction: column;
+  }
+
+  .button-book-now {
+    margin-bottom: 20px;
+  }
+}
+
