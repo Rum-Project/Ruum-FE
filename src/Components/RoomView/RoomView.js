@@ -14,39 +14,36 @@ const RoomView = () => {
           <div className="detailed-view-info">
             <div className="detailed-view-top-info">
               <div className="detailed-view-room-name-info">
-                <p className="detailed-view-info-title">Jeff's House</p>
-                <p className="detailed-view-specific-room-name">
-                  Main Auditorium
-                </p>
+                <p className="detailed-view-info-title room-title">Jeff's House</p>
+                <p className="detailed-view-specific-room-name room-text">Main Auditorium</p>
               </div>
               <div className="detailed-view-ratings-info">
-                <div className="detailed-view-info-title">Ratings:</div>
-                <div className="detailed-view-ratings-value">4.2/5</div>
+                <div className="detailed-view-info-title ratings-title">Ratings:</div>
+                <div className="detailed-view-ratings-value ratings-text">4.2/5</div>
               </div>
               <div className="detailed-view-price-info">
-                <div className="detailed-view-info-title">Price:</div>
-                <div className="detailed-view-rental-price">$85</div>
+                <div className="detailed-view-info-title price-title">Price:</div>
+                <div className="detailed-view-rental-price price-text">$85</div>
               </div>
 
               <div className="detailed-view-available-instruments-info">
-                <div className="detailed-view-info-title">
+                <div className="detailed-view-info-title instrument-title">
                   Available Instruments:
                 </div>
-                <div className="detailed-view-instruments-list">
+                <div className="detailed-view-instruments-list instrument-text">
                   Piano, Drums, Kazoo, French Horn
                 </div>
               </div>
               <div className="detailed-view-amenity-info">
-                <div className="detailed-view-info-title">Amenities:</div>
-                <div className="detailed-view-amenity-list">
-                  Bathroom, Wifi, AC/Heat, Free Parking, Studio Recording and
-                  Staff Check In
+                <div className="detailed-view-info-title amenities-title">Amenities:</div>
+                <div className="detailed-view-amenity-list amenities-text">
+                  Bathroom, WiFi, AC/Heat
                 </div>
               </div>
             </div>
             <div className="detailed-view-bottom-info">
-              <div className="detailed-view-info-title">Full Description:</div>
-              <div className="detailed-view-amenity-list">
+              <div className="detailed-view-info-title description-title">Full Description:</div>
+              <div className="detailed-view-amenity-list description-text">
                 Jeff's House is the optimal place to record your next album.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
