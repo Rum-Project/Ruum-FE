@@ -33,7 +33,7 @@ const RoomView = () => {
               <div className="detailed-view-amenity-info">
                 <div className="detailed-view-info-title">Amenities:</div>
                 <div className="detailed-view-amenity-list">
-                  Bathroom, Wifi, AC/Heat, and More...
+                  Bathroom, Wifi, AC/Heat, Free Parking, Studio Recording and Staff Check In
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@ const RoomView = () => {
               </div>
             </div>
           </div>
-          <button className="button-book-now">BOOK NOW</button>
+          <button className="book-now-button">BOOK NOW</button>
         </div>
       </div>
     </div>

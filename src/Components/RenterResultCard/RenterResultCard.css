@@ -4,7 +4,6 @@
   background-color: #FFFFFF;
   border-radius: 10px;
   margin: 20px;
-  cursor: pointer;
 }
 
 .house-photo {
@@ -33,6 +32,16 @@
   align-self: center;
   margin-top: .75em;
   margin-bottom: .75em;
+  background-size: 200% auto;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  background-image: linear-gradient(to right, #13505B 0%, #10abc7 50%, #13505B 100%);
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.book-room-button:hover,
+.more-details-button:hover {
+  background-position: right center;
 }
 
 @media screen and (min-device-width: 501px) and (max-device-width: 800px) {

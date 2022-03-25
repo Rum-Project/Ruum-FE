@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <RenterResultsContainer />
-      {/* <RenterBookingsContainer /> */}
+      {/* <RenterResultsContainer /> */}
+      <RenterBookingsContainer />
       {/* <RoomView /> */}
       <Footer />
     </div>

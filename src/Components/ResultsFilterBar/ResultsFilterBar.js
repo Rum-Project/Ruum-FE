@@ -26,7 +26,7 @@ const ResultsFilterBar = () => {
       <img src={musicIcon} alt="location" className="filter-icon" />
         <div className="filter-instruments">
           <div className="filter-title">Instruments Available:</div>
-          <div className="filter-instruments-value">Drumbs, Paino, and More...</div>
+          <div className="filter-instruments-value">Drums, Piano, and More...</div>
         </div>
       </div>
       <div className="filter-section">
