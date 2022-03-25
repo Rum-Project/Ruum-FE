@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <NavBar />
       {/* <RenterResultsContainer /> */}
-      {/* <RenterBookingsContainer /> */}
-      <RoomView />
+      <RenterBookingsContainer />
+      {/* <RoomView /> */}
       <Footer />
     </div>
   );
