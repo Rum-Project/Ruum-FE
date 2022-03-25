@@ -1,13 +1,20 @@
 import "./NavBar.css";
 import profileIcon from "../../Images/profileIcon.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navigation">
-      <h1 className="logo">RÜM</h1>
+      <Link to="/">
+        <h1 className="logo">RÜM</h1>
+      </Link>
       <div className="link-container">
-        <div className="navigation-link">Bookings</div>
-        <img className="profilepic" src={profileIcon} alt="profile-pic" />
+        <Link to="dashboard">
+          <div className="navigation-link">Bookings</div>
+        </Link>
+        <Link to="/profile">
+          <img className="profilepic" src={profileIcon} alt="profile-pic" />
+        </Link>
       </div>
     </nav>
   );

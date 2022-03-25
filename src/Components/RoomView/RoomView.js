@@ -1,5 +1,6 @@
 import "./RoomView.css";
 import auditorium from "../../Images/auditorium.png";
+import { Link } from "react-router-dom";
 const RoomView = () => {
   return (
     <div className="detailed-view-container">
@@ -58,7 +59,9 @@ const RoomView = () => {
             </div>
           </div>
 
-          <button className="book-now-button">BOOK NOW</button>
+          <Link to="/dashboard">
+            <button className="book-now-button">BOOK NOW</button>
+          </Link>
         </div>
       </div>
     </div>

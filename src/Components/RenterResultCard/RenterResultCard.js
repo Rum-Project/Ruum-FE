@@ -1,5 +1,6 @@
 import "./RenterResultCard.css";
 import housepic from "../../Images/house.png";
+import { Link } from "react-router-dom";
 const RenterResultCard = () => {
   return (
     <div className="result-card">
@@ -33,8 +34,12 @@ const RenterResultCard = () => {
             </div>
           </div>
           <div className="button-container">
-            <button className="more-details-button">SEE DETAILS</button>
-            <button className="book-room-button">BOOK ROOM</button>
+            <Link to="/booking/1">
+              <button className="more-details-button">SEE DETAILS</button>
+            </Link>
+            <Link to="/dashboard">
+              <button className="book-room-button">BOOK ROOM</button>
+            </Link>
           </div>
         </div>
       </div>
