@@ -1,13 +1,12 @@
-import React from 'react'
-import RenterResultsContainer from '../../Components/RenterResultsContainer/RenterResultsContainer'
-
+import React from "react";
+import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
 
 const Home = () => {
   return (
     <div>
-    <RenterResultsContainer />
+      <RenterResultsContainer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

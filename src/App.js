@@ -17,10 +17,10 @@ function App() {
         <Route exact path="/" render={() => <Home />} />
         <Route
           exact
-          path="/Booking/:id"
+          path="/booking/:id"
           render={({ match }) => <Booking id={match.params.id} />}
         />
-        <Route exact path="/Dashboard" render={() => <Dashboard />} />
+        <Route exact path="/dashboard" render={() => <Dashboard />} />
         <Route
           exact
           path="/User/:id"

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import RenterBookingsContainer from "../../Components/RenterBookingsContainer/RenterBookingsContainer";
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <>
+      <RenterBookingsContainer />
+    </>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
