@@ -1,12 +1,11 @@
 import React from 'react'
-import RoomView from '../../Components/RoomView/RoomView'
+import RenterResultsContainer from '../../Components/RenterResultsContainer/RenterResultsContainer'
 
 
 const Home = () => {
   return (
     <div>
-    <p>Hello</p>
-    <p>WORLD</p>
+    <RenterResultsContainer />
     </div>
   )
 }
