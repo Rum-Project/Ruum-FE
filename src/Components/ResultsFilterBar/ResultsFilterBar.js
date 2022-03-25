@@ -16,28 +16,31 @@ const ResultsFilterBar = () => {
         </div>
       </div>
       <div className="filter-section">
-      <img src={calendarIcon} alt="location" className="filter-icon" />
+        <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
           <div className="filter-title">Date:</div>
           <div className="filter-date-value">March 28th</div>
         </div>
       </div>
       <div className="filter-section">
-      <img src={musicIcon} alt="location" className="filter-icon" />
+        <img src={musicIcon} alt="location" className="filter-icon" />
         <div className="filter-instruments">
           <div className="filter-title">Instruments Available:</div>
-          <div className="filter-instruments-value">Drumbs, Paino, and More...</div>
+
+          <div className="filter-instruments-value">
+            Drums, Piano, and More...
+          </div>
         </div>
       </div>
       <div className="filter-section">
-      <img src={amenitiesIcon} alt="location" className="filter-icon" />
+        <img src={amenitiesIcon} alt="location" className="filter-icon" />
         <div className="filter-amenities">
           <div className="filter-title">Amenities:</div>
           <div className="filter-amenities-value">Wifi</div>
         </div>
       </div>
       <div className="filter-section">
-      <img src={filterIcon} alt="location" className="filter-icon" />
+        <img src={filterIcon} alt="location" className="filter-icon" />
         <div className="filter-sort">
           <div className="filter-title">Sort By:</div>
           <div className="filter-sort-value">Price</div>
