@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <p>Copyright 2022 RÜM</p>
-        <p>Contact Us | FAQ</p>
+        <p className="footer-info">Copyright 2022 RÜM</p>
+        <p className="footer-links">Contact Us | FAQ</p>
         <div className="icon-container">
-          <img src={facebook} className="footericon" alt="facebook icon" />
-          <img src={twitter} className="footericon" alt="twitter icon" />
-          <img src={instagram} className="footericon" alt="instagram icon" />
+          <img src={facebook} className="footer-icon" alt="facebook icon" />
+          <img src={twitter} className="footer-icon" alt="twitter icon" />
+          <img src={instagram} className="footer-icon" alt="instagram icon" />
         </div>
       </div>
     </footer>
