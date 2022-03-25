@@ -1,7 +1,7 @@
 .booking-card {
   display: flex;
   width: calc(100% - 40px);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   margin: 20px;
 }
@@ -24,11 +24,12 @@
   justify-content: space-between;
 }
 
-.top-info, .bottom-info {
+.top-info,
+.bottom-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items:flex-start;
+  align-items: flex-start;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1.5em;
@@ -36,10 +37,11 @@
 }
 
 .card-title {
-  font-weight:700;
+  font-weight: 700;
 }
 
-.card-title, .card-text {
+.card-title,
+.card-text {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -51,19 +53,24 @@
 }
 
 .cancel-button {
-  background-color: #13505B;
+  background-color: #13505b;
   padding: 20px 40px;
   border-radius: 10px;
-  border: 0px solid #FFFFFF;
-  filter: drop-shadow(2px 2px 1px #000000DD);
-  color: #FFFFFF;
+  border: 0px solid #ffffff;
+  filter: drop-shadow(2px 2px 1px #000000dd);
+  color: #ffffff;
   font-weight: 700;
   cursor: pointer;
   margin-right: 1.5em;
   align-self: center;
   background-size: 200% auto;
-  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-  background-image: linear-gradient(to right, #13505B 0%, #10abc7 50%, #13505B 100%);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(
+    to right,
+    #13505b 0%,
+    #10abc7 50%,
+    #13505b 100%
+  );
   transition: 0.5s;
   text-transform: uppercase;
 }
@@ -88,7 +95,8 @@
     flex-direction: column;
   }
 
-  .top-info, .bottom-info {
+  .top-info,
+  .bottom-info {
     margin-bottom: 0em;
   }
 
@@ -108,7 +116,8 @@
     flex-direction: column;
   }
 
-  .top-info, .bottom-info {
+  .top-info,
+  .bottom-info {
     margin-bottom: 0em;
   }
 

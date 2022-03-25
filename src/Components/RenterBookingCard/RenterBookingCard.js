@@ -1,10 +1,10 @@
-import "./RenterBookingCard.css"
-import housepic from '../../Images/house.png'
+import "./RenterBookingCard.css";
+import housepic from "../../Images/house.png";
 
 const RenterBookingCard = () => {
   return (
     <div className="booking-card">
-      <img src={housepic} className="house-photo" alt="room"/>
+      <img src={housepic} className="house-photo" alt="room" />
       <div className="booking-card-details">
         <div className="booking-card-info-and-button-container">
           <div className="info-container">
@@ -33,9 +33,7 @@ const RenterBookingCard = () => {
               <p className="card-text"> $85</p>
             </div>
           </div>
-          <button className="cancel-button">
-            CANCEL BOOKING
-        </button>
+          <button className="cancel-button">CANCEL BOOKING</button>
         </div>
       </div>
     </div>

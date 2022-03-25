@@ -4,7 +4,11 @@ const RoomView = () => {
   return (
     <div className="detailed-view-container">
       <div className="detailed-view-card">
-        <img src={auditorium} className="detailed-view-photo" alt="detailed-room-view" />
+        <img
+          src={auditorium}
+          className="detailed-view-photo"
+          alt="detailed-room-view"
+        />
         <div className="below-image">
           <div className="detailed-view-info">
             <div className="detailed-view-top-info">
@@ -22,6 +26,7 @@ const RoomView = () => {
                 <div className="detailed-view-info-title">Price:</div>
                 <div className="detailed-view-rental-price">$85</div>
               </div>
+
               <div className="detailed-view-available-instruments-info">
                 <div className="detailed-view-info-title">
                   Available Instruments:
@@ -33,7 +38,8 @@ const RoomView = () => {
               <div className="detailed-view-amenity-info">
                 <div className="detailed-view-info-title">Amenities:</div>
                 <div className="detailed-view-amenity-list">
-                  Bathroom, Wifi, AC/Heat, Free Parking, Studio Recording and Staff Check In
+                  Bathroom, Wifi, AC/Heat, Free Parking, Studio Recording and
+                  Staff Check In
                 </div>
               </div>
             </div>
@@ -51,6 +57,7 @@ const RoomView = () => {
               </div>
             </div>
           </div>
+
           <button className="book-now-button">BOOK NOW</button>
         </div>
       </div>
