@@ -4,13 +4,43 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import {ApolloProvider, ApolloClient, InMemoryCache, gql} from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: 'https://powerful-lake-27669.herokuapp.com/graphql',
+  cache: new InMemoryCache()
+});
+
+client  
+  .query({
+    query: gql`
+      {
+        getRoom(id: "1") {
+          id
+          name
+          details
+          photo
+          address
+          city
+          state
+          zip
+          price
+          amenities
+          instruments
+          capacity
+        }
+      }`
+  }).then(response => console.log(response))
+
 
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>,
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
