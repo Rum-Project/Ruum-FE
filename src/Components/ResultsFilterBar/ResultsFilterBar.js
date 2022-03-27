@@ -75,7 +75,12 @@ const ResultsFilterBar = () => {
         <img src={filterIcon} alt="location" className="filter-icon" />
         <div className="filter-sort">
           <div className="filter-title">Sort By:</div>
-          <div className="filter-sort-value">Price</div>
+          <select name="sort" id="sort">
+            <option value="">Select</option>
+            <option value="Price">Price</option>
+            <option value="low-to-high">Cost Low-to-High</option>
+            <option value="high-to-low">Cost High-to-Low</option>
+          </select>
         </div>
       </div>
     </div>
