@@ -4,8 +4,26 @@ import calendarIcon from "../../Images/calendar.svg";
 import musicIcon from "../../Images/music.svg";
 import amenitiesIcon from "../../Images/amenities.svg";
 import filterIcon from "../../Images/filter.svg";
+import Option from "../FilterSelections/FilterSelections";
+import {
+  instrumentAvailableOptions,
+  amenitiesAvailableOptions,
+} from "../../Utils/filterOptions";
+import ReactSelect from "react-select";
+import { useState } from "react";
 
 const ResultsFilterBar = () => {
+  const [availableInstSelect, setAvailableInstSelect] = useState([]);
+  const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
+
+  const handleInstChange = (selected) => {
+    setAvailableInstSelect(selected);
+  };
+
+  const handleAmenChange = (selected) => {
+    setAvailableAmenSelect(selected);
+  };
+
   return (
     <div className="filter-bar">
       <div className="filter-section">
@@ -18,25 +36,39 @@ const ResultsFilterBar = () => {
       <div className="filter-section">
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
-          <div className="filter-title">Date:</div>
-          <div className="filter-date-value">March 28th</div>
+          <input type="date" className="filter-title" />
         </div>
       </div>
       <div className="filter-section">
         <img src={musicIcon} alt="location" className="filter-icon" />
         <div className="filter-instruments">
-          <div className="filter-title">Instruments Available:</div>
-
-          <div className="filter-instruments-value">
-            Drums, Piano, and More...
-          </div>
+          <div className="filter-title">Instruments Available</div>
+          <ReactSelect
+            options={instrumentAvailableOptions}
+            isMulti
+            closeMenuOnSelect={false}
+            hideSelectedOptions={false}
+            components={{ Option }}
+            onChange={handleInstChange}
+            allowSelectAll={true}
+            value={availableInstSelect}
+          />
         </div>
       </div>
       <div className="filter-section">
         <img src={amenitiesIcon} alt="location" className="filter-icon" />
         <div className="filter-amenities">
           <div className="filter-title">Amenities:</div>
-          <div className="filter-amenities-value">Wifi</div>
+          <ReactSelect
+            options={amenitiesAvailableOptions}
+            isMulti
+            closeMenuOnSelect={false}
+            hideSelectedOptions={false}
+            components={{ Option }}
+            onChange={handleAmenChange}
+            allowSelectAll={true}
+            value={availableAmenSelect}
+          />
         </div>
       </div>
       <div className="filter-section">
