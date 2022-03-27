@@ -29,3 +29,13 @@
 .checkbox-dropdown {
   color: black;
 }
+
+@media screen and (min-device-width: 1px) and (max-device-width: 800px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-section {
+    padding-bottom: 8px;
+  }
+}
