@@ -3,10 +3,11 @@
 .filter-bar {
   display: flex;
   justify-content: space-between;
-  background-color: #13505B;
+  background-color: #13505b;
   padding: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .filter-section {
@@ -23,4 +24,8 @@
 
 .filter-title {
   font-weight: 700;
+}
+
+.checkbox-dropdown {
+  color: black;
 }

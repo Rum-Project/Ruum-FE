@@ -8,6 +8,7 @@ import Option from "../FilterSelections/FilterSelections";
 import {
   instrumentAvailableOptions,
   amenitiesAvailableOptions,
+  sortOptions,
 } from "../../Utils/filterOptions";
 import ReactSelect from "react-select";
 import { useState } from "react";
@@ -15,6 +16,7 @@ import { useState } from "react";
 const ResultsFilterBar = () => {
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
+  const [sortSelect, setSortSelect] = useState("");
 
   const handleInstChange = (selected) => {
     setAvailableInstSelect(selected);
@@ -22,6 +24,10 @@ const ResultsFilterBar = () => {
 
   const handleAmenChange = (selected) => {
     setAvailableAmenSelect(selected);
+  };
+
+  const handleSortChange = (selected) => {
+    setSortSelect(selected);
   };
 
   return (
@@ -36,6 +42,7 @@ const ResultsFilterBar = () => {
       <div className="filter-section">
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
+          <div className="filter-title">Select a date</div>
           <input type="date" className="filter-title" />
         </div>
       </div>
@@ -44,6 +51,7 @@ const ResultsFilterBar = () => {
         <div className="filter-instruments">
           <div className="filter-title">Instruments Available</div>
           <ReactSelect
+            className="checkbox-dropdown"
             options={instrumentAvailableOptions}
             isMulti
             closeMenuOnSelect={false}
@@ -60,6 +68,7 @@ const ResultsFilterBar = () => {
         <div className="filter-amenities">
           <div className="filter-title">Amenities:</div>
           <ReactSelect
+            className="checkbox-dropdown"
             options={amenitiesAvailableOptions}
             isMulti
             closeMenuOnSelect={false}
@@ -75,12 +84,16 @@ const ResultsFilterBar = () => {
         <img src={filterIcon} alt="location" className="filter-icon" />
         <div className="filter-sort">
           <div className="filter-title">Sort By:</div>
-          <select name="sort" id="sort">
-            <option value="">Select</option>
-            <option value="Price">Price</option>
-            <option value="low-to-high">Cost Low-to-High</option>
-            <option value="high-to-low">Cost High-to-Low</option>
-          </select>
+          <ReactSelect
+            className="checkbox-dropdown"
+            options={sortOptions}
+            closeMenuOnSelect={true}
+            hideSelectedOptions={false}
+            components={{ Option }}
+            onChange={handleSortChange}
+            allowSelectAll={false}
+            value={sortSelect}
+          />
         </div>
       </div>
     </div>
