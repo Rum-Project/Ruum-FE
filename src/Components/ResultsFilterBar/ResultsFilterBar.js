@@ -16,18 +16,21 @@ import { useState } from "react";
 const ResultsFilterBar = () => {
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
-  const [sortSelect, setSortSelect] = useState("");
+  const [sortSelect, setSortSelect] = useState("High-to-Low");
 
   const handleInstChange = (selected) => {
     setAvailableInstSelect(selected);
+    console.log(selected);
   };
 
   const handleAmenChange = (selected) => {
     setAvailableAmenSelect(selected);
+    console.log(selected);
   };
 
   const handleSortChange = (selected) => {
     setSortSelect(selected);
+    console.log(selected);
   };
 
   return (

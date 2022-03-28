@@ -1,10 +1,14 @@
 import React from "react";
 import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
 
-const Home = () => {
+const Home = (props) => {
+  const [allRooms, setAllRooms] = useState([]);
+
+  //make fetch call, setAllRooms to data
+
   return (
     <div>
-      <RenterResultsContainer />
+      <RenterResultsContainer rooms={allRooms} />
     </div>
   );
 };

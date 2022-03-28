@@ -1,16 +1,23 @@
 import "./RenterResultsContainer.css";
-import RenterResultCard from "../RenterResultCard/RenterResultCard"
-import ResultsFilterBar from "../ResultsFilterBar/ResultsFilterBar"
+import RenterResultCard from "../RenterResultCard/RenterResultCard";
+import ResultsFilterBar from "../ResultsFilterBar/ResultsFilterBar";
 
-const RenterResultsContainer = () => {
+const RenterResultsContainer = (props) => {
   return (
     <div className="results-container">
       <ResultsFilterBar />
-      <RenterResultCard />
-      <RenterResultCard />
-      <RenterResultCard />
-      <RenterResultCard />
-      <RenterResultCard />
+      {props.rooms.map((card) => {
+        return (
+          <RenterResultCard
+            title={card.title}
+            room={card.room}
+            availableInstruments={card.availableInstruments}
+            amenities={card.amenities}
+            rating={card.rating}
+            price={card.price}
+          />
+        );
+      })}
     </div>
   );
 };
