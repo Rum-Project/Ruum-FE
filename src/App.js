@@ -10,11 +10,38 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 function App() {
+  let rooms = [
+    {
+      title: "Jeff's Auditiorium",
+      room: "TV Room",
+      availableInstruments: "Piano",
+      amenities: "Wifi",
+      rating: "4.5/5",
+      price: 85,
+    },
+    {
+      title: "Tony's Study",
+      room: "Computer Room",
+      availableInstruments: "Drums",
+      amenities: "Drinking Water",
+      rating: "5/5",
+      price: 60,
+    },
+    {
+      title: "Daniel's Kitchen",
+      room: "Kitchen",
+      availableInstruments: "none",
+      amenities: "Drinking Water",
+      rating: "5/5",
+      price: 102,
+    },
+  ];
+
   return (
     <main className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <Home />} />
+        <Route exact path="/" render={() => <Home rooms={rooms} />} />
         <Route
           exact
           path="/booking/:id"
