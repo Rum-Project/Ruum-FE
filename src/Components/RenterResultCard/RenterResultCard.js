@@ -38,7 +38,7 @@ const RenterResultCard = (props) => {
             </div>
           </div>
           <div className="button-container">
-            <Link to="/booking/1">
+            <Link to={`/booking/${props.id}`}>
               <button className="more-details-button">SEE DETAILS</button>
             </Link>
             <Link to="/dashboard">

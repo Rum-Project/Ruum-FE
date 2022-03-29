@@ -1,10 +1,10 @@
 import React from 'react'
 import RoomView from '../../Components/RoomView/RoomView'
 
-const Booking = () => {
+const Booking = (props) => {
   return (
     <div>
-      <RoomView/>
+      <RoomView id={props.id}/>
     </div>
   )
 }

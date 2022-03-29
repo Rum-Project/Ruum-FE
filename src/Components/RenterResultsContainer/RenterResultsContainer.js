@@ -13,6 +13,7 @@ const RenterResultsContainer = (props) => {
             amenities={card.amenities}
             rating={card.rating}
             price={card.price}
+            id={card.id}
           />
         );
       })}
