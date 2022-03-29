@@ -1,12 +1,13 @@
-import "../ContactUs/ContactUs.css"
-import { Link } from "react-router-dom";
+import "../ContactUs/ContactUs.css";
 
 const LandingPage = () => {
-  return(
+  return (
     <section className="contact-us-page">
       <div className="contact-us-hero-image">
         <div className="contact-us-hero-text">
-          <h1 className="contact-us-hero-header">MEET THE TEAM BEHIND THE APP</h1>
+          <h1 className="contact-us-hero-header">
+            MEET THE TEAM BEHIND THE APP
+          </h1>
         </div>
       </div>
       <h1 className="contact-header">FRONT END TEAM:</h1>
@@ -79,12 +80,12 @@ const LandingPage = () => {
           <button className="contact-button">GITHUB</button>
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
     </section>
-  )
-}
+  );
+};
 
 export default LandingPage;
