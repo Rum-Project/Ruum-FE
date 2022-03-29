@@ -13,10 +13,11 @@ import {
 import ReactSelect from "react-select";
 import { useState } from "react";
 
-const ResultsFilterBar = () => {
+const ResultsFilterBar = ({date, setDate}) => {
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
   const [sortSelect, setSortSelect] = useState("High-to-Low");
+
 
   const handleInstChange = (selected) => {
     setAvailableInstSelect(selected);
@@ -33,6 +34,7 @@ const ResultsFilterBar = () => {
     console.log(selected);
   };
 
+
   return (
     <div className="filter-bar">
       <div className="filter-section">
@@ -46,7 +48,7 @@ const ResultsFilterBar = () => {
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
           <div className="filter-title">Select a date</div>
-          <input type="date" className="filter-title" />
+          <input type="date" className="filter-title" value={date} onChange={(event) => setDate(event.target.value)} />
         </div>
       </div>
       <div className="filter-section">
