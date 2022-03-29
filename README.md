@@ -1,72 +1,79 @@
-Deploy link: https://ruumproject.herokuapp.com/
+# 🎵 Rüm
 
-# Getting Started with Create React App
+- Click [HERE](https://github.com/Rum-Project/ruum-be) to see the Back-End Repo
+- Click [HERE]( https://ruumproject.herokuapp.com/) to view the deployed site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Abstract](#abstract)
+- [Tech Used](#tech-used)
+- [Installation and Set-Up](#installation-and-set-up)
+- [Features](#features)
+- [See the Site in Action](#see-the-site-in-action)
+- [Future Goals](#future-goals)
+- [Stretch Goals](#stretch-goals)
+- [Created By](#created-by)
+- [Credit](#credit)
 
-In the project directory, you can run:
+## Abstract
 
-### `npm start`
+Rüm is here to connect Room owners with Musicians looking for practice space!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+TBD...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Used
 
-### `npm test`
+- React
+- React Router
+- GraphQL
+- Cypress for E2E testing
+- Figma [Wireframe](https://www.figma.com/file/EPb4ulO2zYGVOkj6zylBuX/R%C3%BCm?node-id=0%3A1)
+- [GitHub Project Board](https://github.com/orgs/Rum-Project/projects/1)
+- [Miro User Flows](https://miro.com/app/board/uXjVODUlPgg=/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Set-Up
 
-### `npm run build`
+To install this project, please see below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+1. Clone down this Repository using `git clone`
+2. Next, `cd` into the cloned repository and `npm install` to install library dependancies
+3. Finally, run `npm start` and open up localhost at the port indicated to view the webpage
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Alternatively, you can access the deployed site [HERE](https://ruumproject.herokuapp.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+Coming soon...
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## See the Site in Action!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Coming soon...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Goals
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Log in capabilities
+- Room owner access and functionality
 
-## Learn More
+## Stretch Goals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GraphQL ✅
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Created By:
 
-### Code Splitting
+Front-End Team:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Daniel O'Connell](https://github.com/Daniel-OC)
+- [Rana Jurjus](https://github.com/rjur11)
+- [Thomas Nguyen](https://github.com/tommi-t-nguyen)
+- [Tony Carpenter](https://github.com/tonycarpenter21)
 
-### Analyzing the Bundle Size
+Back-End Team:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Chris Hewitt](https://github.com/Henchworm)
+- [David Kassin](https://github.com/dkassin)
+- [Hannah Warren](https://github.com/hannahkwarren)
+- [Jackson Valdez](https://github.com/jacksonvaldez)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credit
