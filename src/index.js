@@ -11,18 +11,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-const getRoomsByDate = () => gql`
-      {
-        getAvailableRooms(date: "${new Date(Date.now()).toJSON().slice(0,10)}") {
-          id
-          name
-          photo
-          price
-          amenities
-          instruments
-          }
-      }`
-
 
 ReactDOM.render(
   <ApolloProvider client={client}>

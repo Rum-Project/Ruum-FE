@@ -5,13 +5,12 @@ import ResultsFilterBar from "../ResultsFilterBar/ResultsFilterBar";
 const RenterResultsContainer = (props) => {
   return (
     <div className="results-container">
-      <ResultsFilterBar />
       {props.rooms.map((card) => {
         return (
           <RenterResultCard
-            title={card.title}
-            room={card.room}
-            availableInstruments={card.availableInstruments}
+            key={card.id}
+            title={card.name}
+            availableInstruments={card.instruments}
             amenities={card.amenities}
             rating={card.rating}
             price={card.price}
