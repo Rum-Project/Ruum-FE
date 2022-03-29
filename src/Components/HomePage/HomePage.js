@@ -1,4 +1,5 @@
 import "../HomePage/HomePage.css"
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return(
@@ -7,7 +8,7 @@ const LandingPage = () => {
         <div className="hero-text">
           <h1 className="hero-header">READY TO PLAY LOUD?</h1>
           <p>RÜM can help you find the best places to practice without the fear of annoying your neighbors... again.</p>
-          <button className="call-to-action-button">START SEARCHING</button>
+          <Link to="search"><button className="call-to-action-button">START SEARCHING</button></Link>
         </div>
       </div>
       <div className="homepage-info">
@@ -39,7 +40,7 @@ const LandingPage = () => {
       <div className="homepage-info">
         <div className="homepage-card">
           <h2>Interested in renting out your space?</h2> 
-          <button className="call-to-action-button">Contact Us</button>
+          <Link to="contact-us"><button className="call-to-action-button">Contact Us</button></Link>
         </div>
       </div>
       <br/>
