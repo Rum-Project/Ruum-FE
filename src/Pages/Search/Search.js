@@ -1,7 +1,7 @@
 import React from "react";
 import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
 import ResultsFilterBar from "../../Components/ResultsFilterBar/ResultsFilterBar";
-import getRoomsByDate from "../../queries";
+import {getRoomsByDate} from "../../queries";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
 
