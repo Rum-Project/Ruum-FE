@@ -29,5 +29,29 @@ const getIndividualRoom = (id) => gql`
       capacity
       }
   }`
+
+const getBookingsForMusician = (musicianId) => gql`
+  { getMusicianBookings(id: "${musicianId}")
+        {
+          date
+          room {
+            id
+            name
+            host {
+              name
+            }
+            details
+            photo
+            address
+            city
+            state
+            zip
+            price
+            amenities
+            instruments
+            capacity
+          }
+        }
+      }`
   
-export {getRoomsByDate, getIndividualRoom};
+export {getRoomsByDate, getIndividualRoom, getBookingsForMusician};
