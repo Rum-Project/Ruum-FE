@@ -3,7 +3,7 @@
   background-image: linear-gradient(
     to right,
     #13505b 0%,
-    #10abc7 50%,
+    #5ee7ff 50%,
     #13505b 100%
   );
 }
@@ -35,7 +35,7 @@
 
 .login-underline {
   height: 3px;
-  background: -webkit-linear-gradient(right, #13505b, #10abc7);
+  background: -webkit-linear-gradient(right, #13505b, #5ee7ff);
   width: 30%;
 }
 
@@ -59,7 +59,7 @@
 
 .login-field-underline {
   height: 2px;
-  background: -webkit-linear-gradient(right, #13505b, #10abc7);
+  background: -webkit-linear-gradient(right, #13505b, #5ee7ff);
   width: 100%;
 }
 
@@ -79,7 +79,7 @@
   background-image: linear-gradient(
     to right,
     #13505b 0%,
-    #10abc7 50%,
+    #5ee7ff 50%,
     #13505b 100%
   );
   transition: 0.5s;

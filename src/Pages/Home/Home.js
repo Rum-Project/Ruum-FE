@@ -1,16 +1,13 @@
 import React from "react";
 import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
-import Login from "../../Components/Login/Login";
-import NewUserCreation from "../../Components/NewUserCreation/NewUserCreation";
-import LoadingAnimation from "../../Components/LoadingAnimation/LoadingAnimation";
-import ResetPassword from "../../Components/ResetPassword/ResetPassword";
+import LandingPage from "../../Components/HomePage/HomePage";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
-      <ResetPassword />
+      <LandingPage />
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
