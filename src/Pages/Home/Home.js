@@ -3,11 +3,12 @@ import RenterResultsContainer from "../../Components/RenterResultsContainer/Rent
 import Login from "../../Components/Login/Login";
 import NewUserCreation from "../../Components/NewUserCreation/NewUserCreation";
 import LoadingAnimation from "../../Components/LoadingAnimation/LoadingAnimation";
+import ResetPassword from "../../Components/ResetPassword/ResetPassword";
 
 const Home = () => {
   return (
     <div>
-      <LoadingAnimation />
+      <ResetPassword />
     </div>
   );
 };
