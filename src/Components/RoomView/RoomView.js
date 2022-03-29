@@ -1,7 +1,14 @@
 import "./RoomView.css";
 import auditorium from "../../Images/auditorium.png";
 import { Link } from "react-router-dom";
-const RoomView = () => {
+import {getIndividualRoom} from "../../queries";
+import {useQuery} from '@apollo/client';
+
+const RoomView = (props) => {
+  const {loading, data} = useQuery(getIndividualRoom(props.id))
+  console.log(props.id)
+  console.log(data)
+
   return (
     <div className="detailed-view-container">
       <div className="detailed-view-card">
@@ -14,16 +21,15 @@ const RoomView = () => {
           <div className="detailed-view-info">
             <div className="detailed-view-top-info">
               <div className="detailed-view-room-name-info">
-                <p className="detailed-view-info-title room-title">Jeff's House</p>
-                <p className="detailed-view-specific-room-name room-text">Main Auditorium</p>
+                <p className="detailed-view-info-title room-title">{data.getRoom.name}</p>
               </div>
-              <div className="detailed-view-ratings-info">
+              {/* <div className="detailed-view-ratings-info">
                 <div className="detailed-view-info-title ratings-title">Ratings:</div>
                 <div className="detailed-view-ratings-value ratings-text">4.2/5</div>
-              </div>
+              </div> */}
               <div className="detailed-view-price-info">
                 <div className="detailed-view-info-title price-title">Price:</div>
-                <div className="detailed-view-rental-price price-text">$85</div>
+                <div className="detailed-view-rental-price price-text">${data.getRoom.price}</div>
               </div>
 
               <div className="detailed-view-available-instruments-info">
@@ -31,27 +37,20 @@ const RoomView = () => {
                   Available Instruments:
                 </div>
                 <div className="detailed-view-instruments-list instrument-text">
-                  Piano, Drums, Kazoo, French Horn
+                  {data.getRoom.instruments}
                 </div>
               </div>
               <div className="detailed-view-amenity-info">
                 <div className="detailed-view-info-title amenities-title">Amenities:</div>
                 <div className="detailed-view-amenity-list amenities-text">
-                  Bathroom, WiFi, AC/Heat
+                  {data.getRoom.amenities}
                 </div>
               </div>
             </div>
             <div className="detailed-view-bottom-info">
               <div className="detailed-view-info-title description-title">Full Description:</div>
               <div className="detailed-view-amenity-list description-text">
-                Jeff's House is the optimal place to record your next album.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                {data.getRoom.details}
               </div>
             </div>
           </div>
