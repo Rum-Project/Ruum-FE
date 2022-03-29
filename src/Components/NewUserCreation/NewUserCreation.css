@@ -1,17 +1,18 @@
 .new-user-creation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 90vh;
   background-image: linear-gradient(
     to right,
     #13505b 0%,
-    #10abc7 50%,
+    #5ee7ff 50%,
     #13505b 100%
   );
 }
 
 .new-user-creation-modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +35,7 @@
 
 .new-user-creation-underline {
   height: 3px;
-  background: -webkit-linear-gradient(right, #13505b, #10abc7);
+  background: -webkit-linear-gradient(right, #13505b, #5ee7ff);
   width: 80%;
 }
 
@@ -58,7 +59,7 @@
 
 .new-user-creation-field-underline {
   height: 2px;
-  background: -webkit-linear-gradient(right, #13505b, #10abc7);
+  background: -webkit-linear-gradient(right, #13505b, #5ee7ff);
   width: 100%;
 }
 
@@ -78,7 +79,7 @@
   background-image: linear-gradient(
     to right,
     #13505b 0%,
-    #10abc7 50%,
+    #5ee7ff 50%,
     #13505b 100%
   );
   transition: 0.5s;

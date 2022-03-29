@@ -1,0 +1,99 @@
+.contact-us-hero-image {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../../Images/rum-hero-image-black-and-white.jpg");
+  position: relative;
+}
+
+.contact-us-hero-header {
+  margin-bottom: 20px;
+}
+
+.contact-us-hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.contact-button {
+  width: 150px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: 0px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px 0px 0px 0px;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #13505b 0%,
+    #5ee7ff 50%,
+    #13505b 100%
+  );
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.contact-button:hover {
+  background-position: right center;
+}
+
+.contact-header {
+  margin: 20px ;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: auto;
+  width: 15%;
+  min-width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(50, 50, 93, 1);
+  margin: 20px;
+}
+
+.contact-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../Images/bob.jpg");
+}
+
+.contact-underline {
+  height: 3px;
+  background: -webkit-linear-gradient(right, #13505b, #5ee7ff);
+  width: 80%;
+}
+
+.contact-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  margin: 20px 0px 10px 0px;
+}
+

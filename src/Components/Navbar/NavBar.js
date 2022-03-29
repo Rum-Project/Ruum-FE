@@ -12,6 +12,9 @@ const NavBar = () => {
         <Link to="dashboard">
           <div className="navigation-link">Bookings</div>
         </Link>
+        <Link to="search">
+          <div className="navigation-link">Search</div>
+        </Link>
         <Link to="/profile">
           <img className="profilepic" src={profileIcon} alt="profile-pic" />
         </Link>
