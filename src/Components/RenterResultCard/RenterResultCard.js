@@ -34,7 +34,7 @@ const RenterResultCard = (props) => {
             </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>
-              <p className="card-text price-text">{props.price}</p>
+              <p className="card-text price-text">${props.price.toFixed(2)}</p>
             </div>
           </div>
           <div className="button-container">

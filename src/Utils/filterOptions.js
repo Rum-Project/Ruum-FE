@@ -1,13 +1,18 @@
 export const instrumentAvailableOptions = [
-  { value: "Drums", label: "Drums" },
-  { value: "Piano", label: "Piano" },
+  { value: "drums", label: "Drums" },
+  { value: "piano", label: "Piano" },
+  { value: "trumpet",label:"Trumpet"},
+  { value: "guitar",label:"Guitar"},
+  { value: "keys", label:"Keys"},
+  { value: "gangsa",label:"Gangsa"},
+  { value: "bagpipes",label:"Bagpipes"}
 ];
 
 export const amenitiesAvailableOptions = [
-  { value: "Restrooms", label: "Restrooms" },
-  { value: "Drinking Water", label: "Drinking Water" },
-  { value: "Wifi", label: "Wifi" },
-  { value: "AC/Heat", label: "AC/Heat" },
+  { value: "bathrooms", label: "Restrooms" },
+  { value: "drinking water", label: "Drinking Water" },
+  { value: "wifi", label: "Wifi" },
+  { value: "coffee maker", label: "Coffee Maker"}
 ];
 
 export const sortOptions = [

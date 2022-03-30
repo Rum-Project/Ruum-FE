@@ -11,30 +11,17 @@ import {
   sortOptions,
 } from "../../Utils/filterOptions";
 import ReactSelect from "react-select";
-import { useState } from "react";
 
-const ResultsFilterBar = ({date, setDate}) => {
-  const [availableInstSelect, setAvailableInstSelect] = useState([]);
-  const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
-  const [sortSelect, setSortSelect] = useState("High-to-Low");
-
-
-  const handleInstChange = (selected) => {
-    setAvailableInstSelect(selected);
-    console.log(selected);
-  };
-
-  const handleAmenChange = (selected) => {
-    setAvailableAmenSelect(selected);
-    console.log(selected);
-  };
-
-  const handleSortChange = (selected) => {
-    setSortSelect(selected);
-    console.log(selected);
-  };
-
-
+const ResultsFilterBar = ({
+  date,
+  setDate,
+  availableInstruments,
+  onAvailableInstrumentsChange,
+  availableAmenities,
+  onAvailableAmenitiesChange,
+  sortSelect,
+  onSortChange,
+}) => {
   return (
     <div className="filter-bar">
       <div className="filter-section">
@@ -48,7 +35,13 @@ const ResultsFilterBar = ({date, setDate}) => {
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
           <div className="filter-title">Select a date</div>
-          <input type="date" min={new Date().toJSON().slice(0, 10)} className="filter-title" value={date} onChange={(event) => setDate(event.target.value)} />
+          <input
+            type="date"
+            min={new Date(new Date().toLocaleDateString()).toJSON().slice(0, 10)}
+            className="filter-title"
+            value={date}
+            onChange={(event) => setDate(event.target.value)}
+          />
         </div>
       </div>
       <div className="filter-section">
@@ -62,9 +55,9 @@ const ResultsFilterBar = ({date, setDate}) => {
             closeMenuOnSelect={false}
             hideSelectedOptions={false}
             components={{ Option }}
-            onChange={handleInstChange}
+            onChange={onAvailableInstrumentsChange}
             allowSelectAll={true}
-            value={availableInstSelect}
+            value={availableInstruments}
           />
         </div>
       </div>
@@ -79,9 +72,9 @@ const ResultsFilterBar = ({date, setDate}) => {
             closeMenuOnSelect={false}
             hideSelectedOptions={false}
             components={{ Option }}
-            onChange={handleAmenChange}
+            onChange={onAvailableAmenitiesChange}
             allowSelectAll={true}
-            value={availableAmenSelect}
+            value={availableAmenities}
           />
         </div>
       </div>
@@ -95,7 +88,7 @@ const ResultsFilterBar = ({date, setDate}) => {
             closeMenuOnSelect={true}
             hideSelectedOptions={false}
             components={{ Option }}
-            onChange={handleSortChange}
+            onChange={onSortChange}
             allowSelectAll={false}
             value={sortSelect}
           />
