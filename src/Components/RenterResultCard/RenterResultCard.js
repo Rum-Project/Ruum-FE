@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const RenterResultCard = (props) => {
   return (
     <div className="result-card">
-      <img src={housepic} className="house-photo" alt="room" />
+      <img src={props.photo} className="house-photo" alt="room" />
       <div className="booking-card-details">
         <div className="booking-card-info-and-button-container">
           <div className="info-container">
