@@ -1,11 +1,15 @@
 export const instrumentAvailableOptions = [
+  { value: "bagpipes", label: "Bagpipes" },
   { value: "drums", label: "Drums" },
+  { value: "gangsa", label: "Gangsa" },
+  { value: "gong", label: "Gong" },
+  { value: "guitar", label: "Guitar" },
+  { value: "harp", label: "Harp" },
+  { value: "keys", label: "Keys" },
+  { value: "marimba", label: "Marimba" },
   { value: "piano", label: "Piano" },
   { value: "trumpet", label: "Trumpet" },
-  { value: "guitar", label: "Guitar" },
-  { value: "keys", label: "Keys" },
-  { value: "gangsa", label: "Gangsa" },
-  { value: "bagpipes", label: "Bagpipes" },
+  { value: "xylophone", label: "Xylophone" },
 ];
 
 export const amenitiesAvailableOptions = [
