@@ -33,6 +33,7 @@ const getIndividualRoom = (id) => gql`
 const getBookingsForMusician = (musicianId) => gql`
   { getMusicianBookings(id: "${musicianId}")
         {
+          id
           date
           room {
             id
@@ -53,5 +54,23 @@ const getBookingsForMusician = (musicianId) => gql`
           }
         }
       }`
+
+const createNewBooking = gql`
+mutation CreateBooking($date: String!, $musicianId: ID!, $roomId: ID!){
+  createBooking(input: {date: $date, musicianId: $musicianId, roomId: $roomId}) {
+    date
+    musician {
+      id
+      name
+    }
+    room {
+      id
+      name
+      details
+      photo
+      price
+    }
+  }
+}`
   
-export {getRoomsByDate, getIndividualRoom, getBookingsForMusician};
+export {getRoomsByDate, getIndividualRoom, getBookingsForMusician, createNewBooking};
