@@ -8,6 +8,7 @@ const RenterResultsContainer = (props) => {
         return (
           <RenterResultCard
             key={card.id}
+            photo={card.photo}
             title={card.name}
             availableInstruments={card.instruments}
             amenities={card.amenities}
