@@ -48,7 +48,7 @@ const ResultsFilterBar = ({date, setDate}) => {
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
           <div className="filter-title">Select a date</div>
-          <input type="date" className="filter-title" value={date} onChange={(event) => setDate(event.target.value)} />
+          <input type="date" min={new Date().toJSON().slice(0, 10)} className="filter-title" value={date} onChange={(event) => setDate(event.target.value)} />
         </div>
       </div>
       <div className="filter-section">

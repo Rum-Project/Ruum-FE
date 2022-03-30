@@ -1,19 +1,12 @@
 import "./RoomView.css";
 import auditorium from "../../Images/auditorium.png";
 import { Link } from "react-router-dom";
-import {getIndividualRoom} from "../../queries";
-import {useQuery} from '@apollo/client';
 
-const RoomView = (props) => {
-  const {loading, data, error} = useQuery(getIndividualRoom(props.id))
-  console.log(props.id)
-  console.log(loading, data, error)
+const RoomView = ({room}) => {
+
 
   return (
     <>
-    {loading ? (
-      <h1>Loading...</h1>
-    ) : (
       <div className="detailed-view-container">
         <div className="detailed-view-card">
           <img
@@ -25,31 +18,31 @@ const RoomView = (props) => {
             <div className="detailed-view-info">
               <div className="detailed-view-top-info">
                 <div className="detailed-view-room-name-info">
-                  <p className="detailed-view-info-title room-title">{data.getRoom.name}</p>
+                  <p className="detailed-view-info-title room-title">{room.name}</p>
                 </div>
                 <div className="detailed-view-price-info">
                   <div className="detailed-view-info-title price-title">Price:</div>
-                  <div className="detailed-view-rental-price price-text">${data.getRoom.price}</div>
+                  <div className="detailed-view-rental-price price-text">${room.price.toFixed(2)}</div>
                 </div>
                 <div className="detailed-view-available-instruments-info">
                   <div className="detailed-view-info-title instrument-title">
                     Available Instruments:
                   </div>
                   <div className="detailed-view-instruments-list instrument-text">
-                    {data.getRoom.instruments}
+                  {room.instruments}
                   </div>
                 </div>
                 <div className="detailed-view-amenity-info">
                   <div className="detailed-view-info-title amenities-title">Amenities:</div>
                   <div className="detailed-view-amenity-list amenities-text">
-                    {data.getRoom.amenities}
+                  {room.amenities}
                   </div>
                 </div>
               </div>
               <div className="detailed-view-bottom-info">
                 <div className="detailed-view-info-title description-title">Full Description:</div>
                 <div className="detailed-view-amenity-list description-text">
-                  {data.getRoom.details}
+                {room.details}
                 </div>
               </div>
             </div>
@@ -60,7 +53,6 @@ const RoomView = (props) => {
           </div>
         </div>
       </div>
-    )}
     </>
   );
 };
