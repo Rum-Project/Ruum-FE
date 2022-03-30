@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useQuery } from "@apollo/client";
 
 const Search = () => {
-  const [date, setDate] = useState(new Date().toJSON().slice(0, 10));
+  const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON().slice(0, 10));
   const { loading, data } = useQuery(getRoomsByDate(date));
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
@@ -39,7 +39,7 @@ const Search = () => {
         return sortSelect.value === "Low-to-High" ? -result : result;
       });
   }
-  console.log(rooms);
+
   return (
     <>
       <ResultsFilterBar

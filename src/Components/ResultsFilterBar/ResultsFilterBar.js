@@ -37,7 +37,7 @@ const ResultsFilterBar = ({
           <div className="filter-title">Select a date</div>
           <input
             type="date"
-            min={new Date().toJSON().slice(0, 10)}
+            min={new Date(new Date().toLocaleDateString()).toJSON().slice(0, 10)}
             className="filter-title"
             value={date}
             onChange={(event) => setDate(event.target.value)}
