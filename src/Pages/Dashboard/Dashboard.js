@@ -7,7 +7,6 @@ import { useQuery } from "@apollo/client";
 const Dashboard = () => {
   const {loading, data, error} = useQuery(getBookingsForMusician(2))//LONGTERM FIGURE OUT HOW TO MAKE THIS DYNAMIC ACCORDING TO LOG IN INFO!
 
-  console.log(loading,data, error)
 
   return (
     <>

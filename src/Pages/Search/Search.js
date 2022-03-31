@@ -14,10 +14,9 @@ const Search = () => {
     value: "High-to-Low",
     label: "Cost High-to-Low",
   });
+  console.log(new Date(date).toISOString())
   let rooms = [];
-  console.log(date, loading, data, error);
   if (!loading) {
-    console.log("availabeInst", availableInstSelect);
     rooms = data.getAvailableRooms
       .filter((room) =>
         availableInstSelect.every((instrument) =>
