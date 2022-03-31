@@ -8,6 +8,7 @@ const RenterResultsContainer = (props) => {
       {props.rooms.map((card) => {
         return (
           <RenterResultCard
+            date={props.date}
             key={card.id}
             photo={card.photo}
             title={card.name}

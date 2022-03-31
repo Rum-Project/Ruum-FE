@@ -52,7 +52,7 @@ const Search = () => {
         sortSelect={sortSelect}
         onSortChange={setSortSelect}
       />
-      {loading ? <h1>Loading...</h1> : <RenterResultsContainer rooms={rooms} />}
+      {loading ? <h1>Loading...</h1> : <RenterResultsContainer date={date} rooms={rooms} />}
     </>
   );
 };
