@@ -5,16 +5,16 @@ import { getRoomsByDate } from "../../queries";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
 
-const Search = () => {
-  const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
-  const { loading, data, error } = useQuery(getRoomsByDate(date));
+const Search = (props) => {
+  // const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
+  const { loading, data, error } = useQuery(getRoomsByDate(props.date));
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
   const [sortSelect, setSortSelect] = useState({
     value: "High-to-Low",
     label: "Cost High-to-Low",
   });
-  console.log(new Date(date).toISOString())
+
   let rooms = [];
   if (!loading) {
     rooms = data.getAvailableRooms
@@ -42,8 +42,8 @@ const Search = () => {
   return (
     <>
       <ResultsFilterBar
-        date={date}
-        setDate={setDate}
+        date={props.date}
+        setDate={props.setDate}
         availableInstruments={availableInstSelect}
         onAvailableInstrumentsChange={setAvailableInstSelect}
         availableAmenities={availableAmenSelect}
@@ -51,7 +51,7 @@ const Search = () => {
         sortSelect={sortSelect}
         onSortChange={setSortSelect}
       />
-      {loading ? <h1>Loading...</h1> : <RenterResultsContainer date={date} rooms={rooms} />}
+      {loading ? <h1>Loading...</h1> : <RenterResultsContainer date={props.date} rooms={rooms} />}
     </>
   );
 };
