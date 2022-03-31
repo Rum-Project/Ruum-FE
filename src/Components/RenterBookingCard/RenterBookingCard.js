@@ -1,10 +1,22 @@
 import "./RenterBookingCard.css";
 import housepic from "../../Images/house.png";
+import { useMutation } from "@apollo/client";
+import { deleteBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
 const RenterBookingCard = ({ booking }) => {
   const formatDate = (date) => {
     return new Date(date).toLocaleDateString("en-us");
   };
+  const handleClick = () => {
+    destroyBooking({variables: createDelete()})
+  }
+  const [destroyBooking, {data, loading, error}] = useMutation(deleteBooking, {
+    refetchQueries:[{
+      query:getBookingsForMusician(2)}, {query:getRoomsByDate(booking.date)}]
+  })
+  const createDelete = () => {
+    return {bookingId: `${booking.id}`}
+  }
 
   return (
     <div className="booking-card">
@@ -44,7 +56,7 @@ const RenterBookingCard = ({ booking }) => {
               </p>
             </div>
           </div>
-          <button className="cancel-button">CANCEL BOOKING</button>
+          <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
         </div>
       </div>
     </div>

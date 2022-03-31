@@ -2,21 +2,25 @@ import "./RenterResultCard.css";
 import housepic from "../../Images/house.png";
 import { Link, useHistory } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { createNewBooking } from "../../queries";
+import { createNewBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
 const RenterResultCard = (props) => {
 
   const history = useHistory()
-  const navigateToBookings = () => { 
+  const navigateToBookings = () => {
     createBooking({ variables: createTestObject()})
     history.push("/dashboard")
+    console.log(data)
   }
-  
-  const [createBooking, {data, loading, error}] = useMutation(createNewBooking)
+
+  const [createBooking, {data, loading, error}] = useMutation(createNewBooking, {
+    refetchQueries:[{
+      query:getBookingsForMusician(2)}, {query:getRoomsByDate(props.date)}]
+  })
   const createTestObject = () => {
     return {date: `${props.date}`, musicianId: "2", roomId: `${props.id}`}
   }
-  
+
 
   return (
     <div className="result-card">
