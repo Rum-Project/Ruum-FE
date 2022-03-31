@@ -1,7 +1,24 @@
 import "./RoomView.css";
 import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { createNewBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
-const RoomView = ({ room }) => {
+
+const RoomView = ({ room, date }) => {
+
+  // const navigateToBookings = () => {
+  //   createBooking({ variables: createTestObject()})
+  // }
+
+  const [createBooking, {data, loading, error}] = useMutation(createNewBooking, {
+    refetchQueries:[{
+      query:getBookingsForMusician(2)}, {query:getRoomsByDate(date)}]
+  })
+  const createTestObject = () => {
+    return {date: `${date}`, musicianId: "2", roomId: `${room.id}`}
+  }
+  
+  console.log(date)
   return (
     <>
       <div className="detailed-view-container">
@@ -55,7 +72,7 @@ const RoomView = ({ room }) => {
             </div>
 
             <Link to="/dashboard">
-              <button className="book-now-button">BOOK NOW</button>
+              <button className="book-now-button" onClick={() => createBooking({ variables: createTestObject()})}>BOOK NOW</button>
             </Link>
           </div>
         </div>
