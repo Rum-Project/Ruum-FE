@@ -19,7 +19,7 @@ const RenterBookingsContainer = (props) => {
         return 0;
       }
     });
-    return futureBookings.map((booking, index) => {return <RenterBookingCard key={index} booking={booking}/>})
+    return futureBookings.map((booking) => {return <RenterBookingCard key={booking.id} id={booking.id} booking={booking}/>})
     
   }
 

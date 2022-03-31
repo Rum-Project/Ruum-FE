@@ -35,7 +35,7 @@ const RenterBookingCard = ({ booking }) => {
           <div className="info-container">
             <div className="top-info">
               <p className="card-title date-title">Date:</p>
-              <p className="card-text date-text">{formatDate(booking.date)}</p>
+              <p className="card-text date-text">{booking.date}</p>
             </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>

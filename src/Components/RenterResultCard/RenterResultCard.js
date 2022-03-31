@@ -1,7 +1,23 @@
 import "./RenterResultCard.css";
 import housepic from "../../Images/house.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { createNewBooking } from "../../queries";
+
 const RenterResultCard = (props) => {
+
+  const history = useHistory()
+  const navigateToBookings = () => { 
+    createBooking({ variables: createTestObject()})
+    history.push("/dashboard")
+  }
+  
+  const [createBooking, {data, loading, error}] = useMutation(createNewBooking)
+  const createTestObject = () => {
+    return {date: `${props.date}`, musicianId: "2", roomId: `${props.id}`}
+  }
+  
+
   return (
     <div className="result-card">
       <img src={props.photo} className="house-photo" alt="room" />
@@ -41,9 +57,12 @@ const RenterResultCard = (props) => {
             <Link to={`/booking/${props.id}`}>
               <button className="more-details-button">SEE DETAILS</button>
             </Link>
-            <Link to="/dashboard">
-              <button className="book-room-button">BOOK ROOM</button>
-            </Link>
+            {/* <Link to="/dashboard">
+              <button className="book-room-button" onClick={() => {
+                console.log("the booking is clicked!",loading)
+                createBooking({ variables: createTestObject()})}}>BOOK ROOM</button>
+            </Link> */}
+              <button className="book-room-button" onClick={navigateToBookings}>BOOK ROOM</button>
           </div>
         </div>
       </div>

@@ -2,11 +2,13 @@ import "./RenterResultsContainer.css";
 import RenterResultCard from "../RenterResultCard/RenterResultCard";
 
 const RenterResultsContainer = (props) => {
+
   return (
     <div className="results-container">
       {props.rooms.map((card) => {
         return (
           <RenterResultCard
+            date={props.date}
             key={card.id}
             photo={card.photo}
             title={card.name}
