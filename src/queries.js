@@ -72,5 +72,12 @@ mutation CreateBooking($date: String!, $musicianId: ID!, $roomId: ID!){
     }
   }
 }`
-  
-export {getRoomsByDate, getIndividualRoom, getBookingsForMusician, createNewBooking};
+
+const deleteBooking = gql`
+mutation DestoryBooking($bookingId: ID!){
+  destroyBooking(input: {bookingId: $bookingId}) {
+    id
+  }
+}`
+
+export {getRoomsByDate, getIndividualRoom, getBookingsForMusician, createNewBooking, deleteBooking};
