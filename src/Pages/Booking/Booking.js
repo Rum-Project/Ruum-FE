@@ -12,7 +12,7 @@ const Booking = (props) => {
       {loading ? (
         <h1>Loading...</h1>
       ) :
-      (<RoomView room={data.getRoom}/>
+      (<RoomView room={data.getRoom} date={props.date}/>
     )}
     </>
   )
