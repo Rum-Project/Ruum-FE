@@ -74,7 +74,7 @@ mutation CreateBooking($date: String!, $musicianId: ID!, $roomId: ID!){
 }`
 
 const deleteBooking = gql`
-mutation DestoryBooking($bookingId: ID!){
+mutation DestroyBooking($bookingId: ID!){
   destroyBooking(input: {bookingId: $bookingId}) {
     id
   }
