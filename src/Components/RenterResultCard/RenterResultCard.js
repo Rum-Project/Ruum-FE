@@ -10,7 +10,6 @@ const RenterResultCard = (props) => {
   const navigateToBookings = () => {
     createBooking({ variables: createTestObject()})
     history.push("/dashboard")
-    console.log(data)
   }
 
   const [createBooking, {data, loading, error}] = useMutation(createNewBooking, {

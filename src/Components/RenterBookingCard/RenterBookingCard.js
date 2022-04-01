@@ -12,7 +12,7 @@ const RenterBookingCard = ({ booking }) => {
   }
   const [destroyBooking, {data, loading, error}] = useMutation(deleteBooking, {
     refetchQueries:[{
-      query:getBookingsForMusician(2)}, {query:getRoomsByDate(booking.date)}]
+      query:getBookingsForMusician(2)}, {query:getRoomsByDate(booking.date.slice(0,10))}]
   })
   const createDelete = () => {
     return {bookingId: `${booking.id}`}
