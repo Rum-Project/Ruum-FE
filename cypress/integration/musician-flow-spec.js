@@ -1,7 +1,16 @@
 describe("Musician Music Flow", () => {
+  beforeEach(() => {
+    cy.intercept(
+      "POST",
+      "https://powerful-lake-27669.herokuapp.com/graphql",
+      (req) => {
+        req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
+      }
+    );
+    cy.visit("http://localhost:3000/search");
+  });
   it("On load the musician should see a list of room cards", () => {
-    cy.visit("http://localhost:3000")
-      .get(".results-container")
+    cy.get(".results-container")
       .should("exist")
       .get(".result-card")
       .should("exist")
@@ -14,7 +23,7 @@ describe("Musician Music Flow", () => {
       .get(".info-container")
       .should("exist")
       .get(".top-info")
-      .should("exist") //THESE THREE TESTS NEED BETTER TESTING LONGTERM
+      .should("exist")
       .get(".bottom-info")
       .should("exist") //
       .get(".info-container")
@@ -22,11 +31,11 @@ describe("Musician Music Flow", () => {
       .get(".room-title")
       .first()
       .should("have.text", "Crungalow Studios")
-      // .get('.room-text').first().should('have.text', 'Main Auditorium')
-      // .get('.instrument-title').first().should('have.text', 'Available Instruments:')
+      .get(".instrument-title")
+      .first()
+      .should("have.text", "Available Instruments:")
       .get(".button-container")
       .should("exist")
-
       .get(".more-details-button")
       .first()
       .click()
