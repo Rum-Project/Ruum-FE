@@ -9,10 +9,10 @@ const NavBar = () => {
         <h1 className="logo">RÜM</h1>
       </Link>
       <div className="link-container">
-        <Link to="dashboard">
+        <Link to="/dashboard">
           <div className="navigation-link">Bookings</div>
         </Link>
-        <Link to="search">
+        <Link to="/search">
           <div className="navigation-link">Search</div>
         </Link>
         <Link to="/profile">
