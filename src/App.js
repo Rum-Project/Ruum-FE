@@ -16,7 +16,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
+  const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON().slice(0,10));
 
 
   return (
