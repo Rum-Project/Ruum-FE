@@ -7,7 +7,7 @@ import { useQuery } from "@apollo/client";
 
 const Search = (props) => {
   // const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
-  const { loading, data, error } = useQuery(getRoomsByDate(props.date));
+  const { loading, data } = useQuery(getRoomsByDate(props.date));
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
   const [sortSelect, setSortSelect] = useState({

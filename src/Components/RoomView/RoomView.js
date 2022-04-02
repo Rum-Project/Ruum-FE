@@ -10,7 +10,7 @@ const RoomView = ({ room, date }) => {
   //   createBooking({ variables: createTestObject()})
   // }
 
-  const [createBooking, {data, loading, error}] = useMutation(createNewBooking, {
+  const [createBooking, {}] = useMutation(createNewBooking, {
     refetchQueries:[{
       query:getBookingsForMusician(2)}, {query:getRoomsByDate(date)}]
   })
@@ -18,7 +18,6 @@ const RoomView = ({ room, date }) => {
     return {date: `${date}`, musicianId: "2", roomId: `${room.id}`}
   }
   
-  console.log(date)
   return (
     <>
       <div className="detailed-view-container">
