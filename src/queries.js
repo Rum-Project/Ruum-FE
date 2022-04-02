@@ -1,8 +1,8 @@
-import {gql} from "@apollo/client"
+import { gql } from "@apollo/client";
 
 const getRoomsByDate = (date) => gql`
   {
-    getAvailableRooms(date: "${date}") {
+    query getAvailableRooms(date: "${date}") {
       id
       name
       photo
@@ -10,11 +10,11 @@ const getRoomsByDate = (date) => gql`
       amenities
       instruments
       }
-  }`
+  }`;
 
 const getIndividualRoom = (id) => gql`
   {
-    getRoom(id: "${id}") {
+    query getRoom(id: "${id}") {
       id
       name
       details
@@ -28,10 +28,11 @@ const getIndividualRoom = (id) => gql`
       instruments
       capacity
       }
-  }`
+  }`;
 
 const getBookingsForMusician = (musicianId) => gql`
-  { getMusicianBookings(id: "${musicianId}")
+  { 
+    query getMusicianBookings(id: "${musicianId}")
         {
           id
           date
@@ -53,31 +54,41 @@ const getBookingsForMusician = (musicianId) => gql`
             capacity
           }
         }
-      }`
+      }`;
 
 const createNewBooking = gql`
-mutation CreateBooking($date: String!, $musicianId: ID!, $roomId: ID!){
-  createBooking(input: {date: $date, musicianId: $musicianId, roomId: $roomId}) {
-    date
-    musician {
-      id
-      name
-    }
-    room {
-      id
-      name
-      details
-      photo
-      price
+  mutation CreateBooking($date: String!, $musicianId: ID!, $roomId: ID!) {
+    createBooking(
+      input: { date: $date, musicianId: $musicianId, roomId: $roomId }
+    ) {
+      date
+      musician {
+        id
+        name
+      }
+      room {
+        id
+        name
+        details
+        photo
+        price
+      }
     }
   }
-}`
+`;
 
 const deleteBooking = gql`
-mutation DestroyBooking($bookingId: ID!){
-  destroyBooking(input: {bookingId: $bookingId}) {
-    id
+  mutation DestroyBooking($bookingId: ID!) {
+    destroyBooking(input: { bookingId: $bookingId }) {
+      id
+    }
   }
-}`
+`;
 
-export {getRoomsByDate, getIndividualRoom, getBookingsForMusician, createNewBooking, deleteBooking};
+export {
+  getRoomsByDate,
+  getIndividualRoom,
+  getBookingsForMusician,
+  createNewBooking,
+  deleteBooking,
+};

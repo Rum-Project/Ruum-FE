@@ -1,0 +1,15 @@
+{
+    "data": {
+      "getAvailableRooms": [
+        {
+          "id": "1",
+          "name": "Crungalow Studios",
+          "photo":
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+          "price": 152.94513408358924,
+          "amenities": "wifi, bathrooms",
+          "instruments": "marimba"
+        }
+      ]
+    }
+  }

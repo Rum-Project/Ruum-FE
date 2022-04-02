@@ -1,6 +1,21 @@
+import { aliasQuery } from "../../src/Utils/graphql-test-utils";
+
 describe("Musician Music Flow", () => {
+  beforeEach(() => {
+    cy.intercept(
+      "POST",
+      "https://powerful-lake-27669.herokuapp.com/graphql",
+      (req) => {
+        aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
+        aliasQuery(req, "getRoom", "roomDetailsFixture.json");
+        // aliasMutation(req, "getMusicianBookings", "bookingsFixture.json")
+
+        // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
+      }
+    );
+  });
   it("On load the musician should see a list of room cards", () => {
-    cy.visit("http://localhost:3000")
+    cy.visit("http://localhost:3000/search")
       .get(".results-container")
       .should("exist")
       .get(".result-card")
@@ -14,7 +29,7 @@ describe("Musician Music Flow", () => {
       .get(".info-container")
       .should("exist")
       .get(".top-info")
-      .should("exist") //THESE THREE TESTS NEED BETTER TESTING LONGTERM
+      .should("exist")
       .get(".bottom-info")
       .should("exist") //
       .get(".info-container")
@@ -22,14 +37,18 @@ describe("Musician Music Flow", () => {
       .get(".room-title")
       .first()
       .should("have.text", "Crungalow Studios")
-      // .get('.room-text').first().should('have.text', 'Main Auditorium')
-      // .get('.instrument-title').first().should('have.text', 'Available Instruments:')
+      .get(".instrument-title")
+      .first()
+      .should("have.text", "Available Instruments:")
       .get(".button-container")
       .should("exist")
-
       .get(".more-details-button")
       .first()
       .click()
+
+      // Details view
+
+      .wait("@getRoom")
       .get(".detailed-view-container")
       .should("exist")
       .get(".detailed-view-card")
@@ -46,37 +65,31 @@ describe("Musician Music Flow", () => {
       .should("exist")
       .get(".room-title")
       .first()
-      .should("have.text", "Jeff's House")
-      .get(".room-text")
-      .first()
-      .should("have.text", "Main Auditorium")
+      .should("have.text", "Crungalow Studios")
       .get(".instrument-title")
       .first()
       .should("have.text", "Available Instruments:")
       .get(".instrument-text")
       .first()
-      .should("have.text", "Piano, Drums, Kazoo, French Horn")
+      .should("have.text", "marimba")
       .get(".amenities-title")
       .first()
       .should("have.text", "Amenities:")
       .get(".amenities-text")
       .first()
-      .should("have.text", "Bathroom, WiFi, AC/Heat")
-      .get(".ratings-title")
-      .first()
-      .should("have.text", "Ratings:")
-      .get(".ratings-text")
-      .first()
-      .should("have.text", "4.2/5")
+      .should("have.text", "wifi, bathrooms")
       .get(".price-title")
       .first()
       .should("have.text", "Price:")
       .get(".price-text")
       .first()
-      .should("have.text", "$85")
+      .should("have.text", "$152.95")
       .get(".book-now-button")
       .click()
 
+      // Bookings View
+      .url()
+      .should("eq", "http://localhost:3000/dashboard")
       .get(".results-container")
       .should("exist")
       .get(".booking-card")

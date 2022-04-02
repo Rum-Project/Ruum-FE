@@ -1,0 +1,27 @@
+{
+    "data": {
+        "getMusicianBookings": [
+            {
+                "id": "17",
+                "date": "2022-04-30 00:00:00 UTC",
+                "room": {
+                    "id": "2",
+                    "name": "Amphitheater 2",
+                    "host": {
+                        "name": "Jon H"
+                    },
+                    "details": "This room has plenty of available instruments and amenities. Youll never want to book another room again!",
+                    "photo": "https://images.unsplash.com/photo-1564078516393-cf04bd966897",
+                    "address": "2 Not a Street",
+                    "city": "Denver",
+                    "state": "CO",
+                    "zip": "80211",
+                    "price": 37.28512723432239,
+                    "amenities": "wifi, bathrooms, drinking water",
+                    "instruments": "trumpet",
+                    "capacity": 2
+                }
+            }
+        ]
+    }
+}
