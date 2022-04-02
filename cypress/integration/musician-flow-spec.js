@@ -8,6 +8,7 @@ describe("Musician Music Flow", () => {
       (req) => {
         aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
         aliasQuery(req, "getRoom", "roomDetailsFixture.json");
+        // aliasMutation(req, "getMusicianBookings", "bookingsFixture.json")
 
         // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
       }
@@ -44,6 +45,9 @@ describe("Musician Music Flow", () => {
       .get(".more-details-button")
       .first()
       .click()
+
+      // Details view
+
       .wait("@getRoom")
       .get(".detailed-view-container")
       .should("exist")
@@ -62,9 +66,6 @@ describe("Musician Music Flow", () => {
       .get(".room-title")
       .first()
       .should("have.text", "Crungalow Studios")
-      // .get(".room-text")
-      // // .first()
-      // // .should("have.text", "Main Auditorium")
       .get(".instrument-title")
       .first()
       .should("have.text", "Available Instruments:")
@@ -77,12 +78,6 @@ describe("Musician Music Flow", () => {
       .get(".amenities-text")
       .first()
       .should("have.text", "wifi, bathrooms")
-      // .get(".ratings-title")
-      // .first()
-      // .should("have.text", "Ratings:")
-      // .get(".ratings-text")
-      // .first()
-      // .should("have.text", "4.2/5")
       .get(".price-title")
       .first()
       .should("have.text", "Price:")
@@ -92,6 +87,9 @@ describe("Musician Music Flow", () => {
       .get(".book-now-button")
       .click()
 
+      // Bookings View
+      .url()
+      .should("eq", "http://localhost:3000/dashboard")
       .get(".results-container")
       .should("exist")
       .get(".booking-card")

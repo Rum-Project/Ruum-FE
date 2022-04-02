@@ -37,7 +37,12 @@ export const aliasQuery = (req, operationName, fixture) => {
 
 // Alias mutation if operationName matches
 export const aliasMutation = (req, operationName) => {
-  if (req.body.mutation.includes(operationName)) {
-    req.alias = `gql${operationName}Mutation`;
+  if (
+    req.body.hasOwnProperty("mutation") &&
+    req.body.query.includes(operationName)
+  ) {
+    req.body.variables.id = 1;
+    req.alias = operationName;
+    req.reply({ statusCode: 200, fixture: fixture });
   }
 };
