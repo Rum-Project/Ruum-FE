@@ -1,4 +1,4 @@
-import { aliasQuery } from "../../src/Utils/graphql-test-utils";
+import { aliasQuery, aliasMutation } from "../../src/Utils/graphql-test-utils";
 
 describe("Musician Music Flow", () => {
   beforeEach(() => {
@@ -8,7 +8,7 @@ describe("Musician Music Flow", () => {
       (req) => {
         aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
         aliasQuery(req, "getRoom", "roomDetailsFixture.json");
-        // aliasMutation(req, "getMusicianBookings", "bookingsFixture.json")
+        aliasQuery(req, "getMusicianBookings", "bookingsFixture.json")
 
         // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
       }
@@ -106,34 +106,31 @@ describe("Musician Music Flow", () => {
       .should("exist")
       .get(".room-title")
       .first()
-      .should("have.text", "Jeff's House")
-      .get(".room-text")
-      .first()
-      .should("have.text", "Main Auditorium")
+      .should("have.text", "Amphitheater 2")
       .get(".instrument-title")
       .first()
       .should("have.text", "Available Instruments:")
       .get(".instrument-text")
       .first()
-      .should("have.text", "Piano, Drums, Kazoo, French Horn")
+      .should("have.text", "trumpet")
       .get(".amenities-title")
       .first()
       .should("have.text", "Amenities:")
       .get(".amenities-text")
       .first()
-      .should("have.text", "Bathroom, WiFi, AC/Heat")
+      .should("have.text", "wifi, bathrooms, drinking water")
       .get(".date-title")
       .first()
       .should("have.text", "Date:")
       .get(".date-text")
       .first()
-      .should("have.text", "3/28/2022")
+      .should("have.text", "2022-04-30 00:00:00 UTC")
       .get(".price-title")
       .first()
       .should("have.text", "Price:")
       .get(".price-text")
       .first()
-      .should("have.text", "$85")
+      .should("have.text", "$37.29")
       .get(".cancel-button")
       .should("exist"); //THIS NEEDS TO BE CHANGED THE SECOND THAT CANCEL BOOKING DOES ANYTHING
   });
