@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const getRoomsByDate = (date) => gql`
   {
-    query getAvailableRooms(date: "${date}") {
+    getAvailableRooms(date: "${date}") {
       id
       name
       photo
@@ -14,7 +14,7 @@ const getRoomsByDate = (date) => gql`
 
 const getIndividualRoom = (id) => gql`
   {
-    query getRoom(id: "${id}") {
+    getRoom(id: "${id}") {
       id
       name
       details
@@ -32,7 +32,7 @@ const getIndividualRoom = (id) => gql`
 
 const getBookingsForMusician = (musicianId) => gql`
   { 
-    query getMusicianBookings(id: "${musicianId}")
+    getMusicianBookings(id: "${musicianId}")
         {
           id
           date

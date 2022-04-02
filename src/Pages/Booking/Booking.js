@@ -4,7 +4,7 @@ import {getIndividualRoom} from "../../queries";
 import {useQuery} from '@apollo/client';
 
 const Booking = (props) => {
-  const {loading, data, error} = useQuery(getIndividualRoom(props.id))
+  const {loading, data} = useQuery(getIndividualRoom(props.id))
 
 
   return (
