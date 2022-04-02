@@ -11,7 +11,7 @@ const RenterResultCard = (props) => {
     history.push("/dashboard")
   }
 
-  const [createBooking, {}] = useMutation(createNewBooking, {
+  const [createBooking] = useMutation(createNewBooking, {
     refetchQueries:[{
       query:getBookingsForMusician(2)}, {query:getRoomsByDate(props.date)}]
   })

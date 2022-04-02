@@ -10,7 +10,7 @@ const RoomView = ({ room, date }) => {
   //   createBooking({ variables: createTestObject()})
   // }
 
-  const [createBooking, {}] = useMutation(createNewBooking, {
+  const [createBooking] = useMutation(createNewBooking, {
     refetchQueries:[{
       query:getBookingsForMusician(2)}, {query:getRoomsByDate(date)}]
   })
