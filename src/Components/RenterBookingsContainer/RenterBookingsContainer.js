@@ -33,10 +33,10 @@ const RenterBookingsContainer = (props) => {
     pastBookings.sort((a, b) => {
       a = new Date(a.date);
       b = new Date(b.date);
-      if (a < b) {
-        return 1;
-      } else if (b < a) {
+      if (a > b) {
         return -1;
+      } else if (b < a) {
+        return 1;
       } else {
         return 0;
       }
@@ -47,26 +47,6 @@ const RenterBookingsContainer = (props) => {
       );
     });
   };
-
-  const getPastBookings = () => {
-    const today = new Date(new Date().toDateString());
-    const pastBookings = props.bookings.filter((booking) => {
-      return new Date(booking.date) < today;
-    });
-    pastBookings.sort((a, b) => {
-      a = new Date(a.date);
-      b = new Date(b.date);
-      if (a > b) {
-        return -1;
-      } else if (b < a) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-    return pastBookings.map((booking) => {return <RenterBookingCard key={booking.id} id={booking.id} booking={booking}/>})
-
-  }
 
   return (
     <div className="results-container">
