@@ -2,7 +2,6 @@ import "./RenterBookingsContainer.css";
 import RenterBookingCard from "../RenterBookingCard/RenterBookingCard";
 
 const RenterBookingsContainer = (props) => {
-
   const getFutureBookings = () => {
     const today = new Date(new Date().toDateString());
     const futureBookings = props.bookings.filter((booking) => {
@@ -19,9 +18,12 @@ const RenterBookingsContainer = (props) => {
         return 0;
       }
     });
-    return futureBookings.map((booking) => {return <RenterBookingCard key={booking.id} id={booking.id} booking={booking}/>})
-
-  }
+    return futureBookings.map((booking) => {
+      return (
+        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} />
+      );
+    });
+  };
 
   const getPastBookings = () => {
     const today = new Date(new Date().toDateString());
@@ -39,9 +41,12 @@ const RenterBookingsContainer = (props) => {
         return 0;
       }
     });
-    return pastBookings.map((booking) => {return <RenterBookingCard key={booking.id} id={booking.id} booking={booking}/>})
-
-  }
+    return pastBookings.map((booking) => {
+      return (
+        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} />
+      );
+    });
+  };
 
   return (
     <div className="results-container">

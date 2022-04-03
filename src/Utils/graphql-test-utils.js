@@ -10,22 +10,7 @@ export const hasOperationName = (req, operationName) => {
 
 // Alias query if operationName matches
 export const aliasQuery = (req, operationName, fixture) => {
-  //   if (
-  //     hasOperationName(req, operationName) &&
-  //     operationName === "getAvailableRooms"
-  //   ) {
-  //     req.alias = `gql${operationName}Query`;
-  //     req.reply((res) => {
-  //       res.body.data = roomcardFixture;
-  //     });
-  //   }
-  //   if (hasOperationName(req, operationName) && operationName === "getRoom") {
-  //     req.body.variables.id = 1;
-  //     req.alias = `gql${operationName}Query`;
-  //     req.reply((res) => {
-  //       res.body.data = roomDetailsFixture;
-  //     });
-  //   }
+
   if (
     req.body.hasOwnProperty("query") &&
     req.body.query.includes(operationName)
