@@ -1,0 +1,8 @@
+.error-container {
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+  padding: 100px;
+  
+}
