@@ -55,7 +55,9 @@ const RenterBookingCard = ({ booking }) => {
               </p>
             </div>
           </div>
-          <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+          <div className="button-container">
+            <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+          </div>
         </div>
       </div>
     </div>

@@ -4,11 +4,17 @@
   background-color: #ffffff;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: 0px 0px 15px rgba(50, 50, 93, 1);
 }
 
 .house-photo {
   width: 20%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -16,24 +22,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .book-room-button,
 .more-details-button {
-  background-color: #13505b;
-  padding: 20px 40px;
-  border-radius: 10px;
+  width: 200px;
+  padding: 15px 40px;
+  border-radius: 5px;
   border: 0px solid #ffffff;
-  filter: drop-shadow(2px 2px 1px #000000dd);
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
-  margin-right: 1.5em;
-  align-self: center;
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin: 20px;
   background-size: 200% auto;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   background-image: linear-gradient(
     to right,
     #13505b 0%,
@@ -44,6 +46,15 @@
   text-transform: uppercase;
 }
 
+.more-details-button {
+  background-image: linear-gradient(
+    to right,
+    #3b3b3b 0%,
+    #9c9c9c 50%,
+    #3b3b3b 100%
+  );
+}
+
 .book-room-button:hover,
 .more-details-button:hover {
   background-position: right center;
@@ -52,8 +63,8 @@
 @media screen and (min-device-width: 501px) and (max-device-width: 800px) {
   .house-photo {
     width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0px 0px;
+    height: 500px;
+    border-radius: 10px 0px 0px 10px;
   }
 
   .book-room-button,
@@ -75,7 +86,7 @@
 
   .house-photo {
     width: 100%;
-    height: auto;
+    height: 350px;
     border-radius: 10px 10px 0px 0px;
   }
 
