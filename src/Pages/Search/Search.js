@@ -8,16 +8,17 @@ import { useQuery } from "@apollo/client";
 
 const Search = (props) => {
   // const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
-  const { loading, data } = useQuery(getRoomsByDate(props.date));
+  const { loading, data, error } = useQuery(getRoomsByDate(props.date));
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
   const [sortSelect, setSortSelect] = useState({
     value: "High-to-Low",
     label: "Cost High-to-Low",
   });
+  console.log(error)
 
   let rooms = [];
-  if (!loading) {
+  if (!loading && !error) {
     rooms = data.getAvailableRooms
       .filter((room) =>
         availableInstSelect.every((instrument) =>
@@ -40,6 +41,16 @@ const Search = (props) => {
       });
   }
 
+  const handleLoadingAndError = () => {
+    if (loading) {
+      return <LoadingAnimation />
+    } else if (error) {
+      return <h3 className="results-error-message">Ruh roh, something went wrong on our end, please try again!</h3>
+    } else {
+      return <RenterResultsContainer date={props.date} rooms={rooms} />
+    }
+  }
+
   return (
     <>
       <label for="search">
@@ -53,11 +64,7 @@ const Search = (props) => {
           sortSelect={sortSelect}
           onSortChange={setSortSelect}
         />
-        {loading ? (
-          <LoadingAnimation />
-        ) : (
-          <RenterResultsContainer date={props.date} rooms={rooms} />
-        )}
+        {handleLoadingAndError()}
       </label>
     </>
   );
