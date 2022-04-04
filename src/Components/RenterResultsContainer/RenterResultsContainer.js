@@ -20,7 +20,7 @@ const RenterResultsContainer = (props) => {
       })}
     </div>
    :
-   <h2>Sorry, no rooms available that match your search! Consider being less picky!</h2>;
+   <h3 className="results-error-message">Sorry, no rooms available that match your search! Consider being less picky!</h3>;
 };
 
 export default RenterResultsContainer;
