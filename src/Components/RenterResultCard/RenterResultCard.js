@@ -34,7 +34,6 @@ const RenterResultCard = (props) => {
           <div className="info-container">
             <div className="top-info">
               <p className="card-title room-title">{props.title}</p>
-              <p className="card-text room-text">{props.room}</p>
             </div>
             <div className="bottom-info">
               <p className="card-title instrument-title">
@@ -46,7 +45,7 @@ const RenterResultCard = (props) => {
               </p>
             </div>
           </div>
-          <div className="info-container">
+          {/* <div className="info-container">
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
               <p className="card-text amenities-text">
@@ -54,9 +53,15 @@ const RenterResultCard = (props) => {
                   props.amenities.slice(1)}
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="info-container">
-            <div className="top-info"></div>
+            <div className="top-info">
+              <p className="card-title amenities-title">Amenities:</p>
+                <p className="card-text amenities-text">
+                  {props.amenities.charAt(0).toUpperCase() +
+                    props.amenities.slice(1)}
+                </p>
+            </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>
               <p className="card-text price-text">${props.price.toFixed(2)}</p>
