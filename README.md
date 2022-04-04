@@ -17,9 +17,8 @@
 
 ## Abstract
 
-Rüm is here to connect Room owners with Musicians looking for practice space!
+Rüm is here to connect Room owners with Musicians looking for practice space! As a musician it can be hard to find a place to practice that won't upset your neighbors and Rüm can help you find places to practice! Simply enter in the date, amenities, and any instruments you want to have on site to see all the available bookings. To instantly book a room click the "BOOK NOW" button or click the "SEE DETAILS" button to learn more about the practice space! A user can also view all their past bookings or cancel upcoming bookings as well in the "Bookings" tab in the navigation bar.
 
-TBD...
 
 ## Tech Used
 
@@ -45,7 +44,13 @@ Alternatively, you can access the deployed site [HERE](https://ruumproject.herok
 
 ## Features
 
-Coming soon...
+- View all available booking for a given date
+- Sort the available booking results by available amenities, price, or by instruments available
+- See more details about a practice space
+- See upcoming and past bookings
+- Cancel upcoming bookings
+- Mobile and Computer friendly responsive design
+- Deployed website
 
 ## See the Site in Action!
 
