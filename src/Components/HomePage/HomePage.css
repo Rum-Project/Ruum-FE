@@ -92,7 +92,9 @@
   min-width: 300px;
 }
 
-.testimonial-photo {
+.testimonial-photo-1,
+.testimonial-photo-2,
+.testimonial-photo-3 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -101,6 +103,14 @@
   background-size: cover;
   background-position: center;
   background-image: url("../../Images/bob.jpg");
+}
+
+.testimonial-photo-2 {
+background-image: url('https://www.goodnet.org/photos/281x197/35629_hd.jpg');
+}
+
+.testimonial-photo-3 {
+  background-image: url('https://pbs.twimg.com/profile_images/950905678167724033/aEb3fjXo_400x400.jpg');
 }
 
 .testimonial-underline {
