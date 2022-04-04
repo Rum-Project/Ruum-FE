@@ -52,7 +52,9 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">TONY</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
+          <button className="contact-button">
+            <a href="mailto:tonycarpenter@gmail.com">EMAIL</a>
+          </button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/tony-carpenter/" }}
             target="_blank"

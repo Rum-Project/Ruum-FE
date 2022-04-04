@@ -35,14 +35,14 @@ const RenterResultCard = (props) => {
                 Available Instruments:
               </p>
               <p className="card-text instrument-text">
-                {props.availableInstruments}
+                {props.availableInstruments.charAt(0).toUpperCase() + props.availableInstruments.slice(1)}
               </p>
             </div>
           </div>
           <div className="info-container">
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
-              <p className="card-text amenities-text">{props.amenities}</p>
+              <p className="card-text amenities-text">{props.amenities.charAt(0).toUpperCase() + props.amenities.slice(1)}</p>
             </div>
           </div>
           <div className="info-container">

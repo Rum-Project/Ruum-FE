@@ -49,6 +49,7 @@ Alternatively, you can access the deployed site [HERE](https://ruumproject.herok
 - See more details about a practice space
 - See upcoming and past bookings
 - Cancel upcoming bookings
+- 100% Lighthouse Accessibility Ratings on all pages
 - Mobile and Computer friendly responsive design
 - Deployed website
 

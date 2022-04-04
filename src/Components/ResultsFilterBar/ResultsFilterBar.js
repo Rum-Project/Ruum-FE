@@ -34,9 +34,12 @@ const ResultsFilterBar = ({
       <div className="filter-section">
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
-          <div className="filter-title">Select a date</div>
+          <div className="filter-title">
+            <label for="date">Select a date:</label>
+          </div>
           <input
             type="date"
+            id="date"
             min={new Date(new Date().toLocaleDateString()).toJSON().slice(0, 10)}
             className="filter-title"
             value={date.slice(0, 10)}
@@ -47,8 +50,11 @@ const ResultsFilterBar = ({
       <div className="filter-section">
         <img src={musicIcon} alt="location" className="filter-icon" />
         <div className="filter-instruments">
-          <div className="filter-title">Instruments Available</div>
+          <div className="filter-title">
+            <label for="instruments-available">Instruments Available:</label>
+          </div>
           <ReactSelect
+            id="instruments-available"
             className="checkbox-dropdown"
             options={instrumentAvailableOptions}
             isMulti
@@ -64,8 +70,11 @@ const ResultsFilterBar = ({
       <div className="filter-section">
         <img src={amenitiesIcon} alt="location" className="filter-icon" />
         <div className="filter-amenities">
-          <div className="filter-title">Amenities:</div>
+          <div className="filter-title">
+            <label for="amenities-available">Amenities Available:</label>
+          </div>
           <ReactSelect
+            id="amenities-available"
             className="checkbox-dropdown"
             options={amenitiesAvailableOptions}
             isMulti
@@ -76,13 +85,17 @@ const ResultsFilterBar = ({
             allowSelectAll={true}
             value={availableAmenities}
           />
+
         </div>
       </div>
       <div className="filter-section">
         <img src={filterIcon} alt="location" className="filter-icon" />
         <div className="filter-sort">
-          <div className="filter-title">Sort By:</div>
+          <div className="filter-title">
+          <label for="sort-by-price">Sort By:</label>
+          </div>
           <ReactSelect
+            id="sort-by-price"
             className="checkbox-dropdown"
             options={sortOptions}
             closeMenuOnSelect={true}
