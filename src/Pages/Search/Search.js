@@ -1,6 +1,7 @@
 import React from "react";
 import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
 import ResultsFilterBar from "../../Components/ResultsFilterBar/ResultsFilterBar";
+import LoadingAnimation from "../../Components/LoadingAnimation/LoadingAnimation";
 import { getRoomsByDate } from "../../queries";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
@@ -41,17 +42,23 @@ const Search = (props) => {
 
   return (
     <>
-      <ResultsFilterBar
-        date={props.date}
-        setDate={props.setDate}
-        availableInstruments={availableInstSelect}
-        onAvailableInstrumentsChange={setAvailableInstSelect}
-        availableAmenities={availableAmenSelect}
-        onAvailableAmenitiesChange={setAvailableAmenSelect}
-        sortSelect={sortSelect}
-        onSortChange={setSortSelect}
-      />
-      {loading ? <h1>Loading...</h1> : <RenterResultsContainer date={props.date} rooms={rooms} />}
+      <label for="search">
+        <ResultsFilterBar
+          date={props.date}
+          setDate={props.setDate}
+          availableInstruments={availableInstSelect}
+          onAvailableInstrumentsChange={setAvailableInstSelect}
+          availableAmenities={availableAmenSelect}
+          onAvailableAmenitiesChange={setAvailableAmenSelect}
+          sortSelect={sortSelect}
+          onSortChange={setSortSelect}
+        />
+        {loading ? (
+          <LoadingAnimation />
+        ) : (
+          <RenterResultsContainer date={props.date} rooms={rooms} />
+        )}
+      </label>
     </>
   );
 };

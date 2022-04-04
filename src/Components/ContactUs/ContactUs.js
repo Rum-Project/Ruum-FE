@@ -17,7 +17,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">RANA</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/rana-jurjus/" }}
             target="_blank"
@@ -32,7 +31,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">DANIEL</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{
               pathname: "https://www.linkedin.com/in/daniel-o-connell-maker/",
@@ -52,7 +50,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">TONY</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/tony-carpenter/" }}
             target="_blank"
@@ -70,7 +67,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">THOMAS</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/tommi-t-nguyen/" }}
             target="_blank"
@@ -91,7 +87,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">Hannah</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/hannahkwarren/" }}
             target="_blank"
@@ -109,7 +104,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">Chris</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{
               pathname: "https://www.linkedin.com/in/chris-hewitt-78721b21b/",
@@ -129,7 +123,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">David</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/david-kassin/" }}
             target="_blank"
@@ -144,7 +137,6 @@ const LandingPage = () => {
           <div className="contact-photo" alt="contact Photo"></div>
           <div className="contact-title">Jackson</div>
           <div className="contact-underline"></div>
-          <button className="contact-button">EMAIL</button>
           <Link
             to={{ pathname: "https://www.linkedin.com/in/valdez-jackson/" }}
             target="_blank"

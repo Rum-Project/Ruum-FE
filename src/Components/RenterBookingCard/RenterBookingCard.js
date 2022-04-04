@@ -31,7 +31,7 @@ const RenterBookingCard = ({ booking }) => {
                 Available Instruments:
               </p>
               <p className="card-text instrument-text">
-                {booking.room.instruments}
+                {booking.room.instruments.charAt(0).toUpperCase() + booking.room.instruments.slice(1)}
               </p>
             </div>
           </div>
@@ -39,14 +39,14 @@ const RenterBookingCard = ({ booking }) => {
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
               <p className="card-text amenities-text">
-                {booking.room.amenities}
+                {booking.room.amenities.charAt(0).toUpperCase() + booking.room.amenities.slice(1)}
               </p>
             </div>
           </div>
           <div className="info-container">
             <div className="top-info">
               <p className="card-title date-title">Date:</p>
-              <p className="card-text date-text">{booking.date}</p>
+              <p className="card-text date-text">{booking.date.substring(0,10)}</p>
             </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>
@@ -55,7 +55,9 @@ const RenterBookingCard = ({ booking }) => {
               </p>
             </div>
           </div>
-          <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+          <div className="button-container">
+            <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+          </div>
         </div>
       </div>
     </div>

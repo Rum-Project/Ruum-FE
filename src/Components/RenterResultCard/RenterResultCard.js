@@ -1,24 +1,30 @@
 import "./RenterResultCard.css";
 import { Link, useHistory } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { createNewBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
+import {
+  createNewBooking,
+  getBookingsForMusician,
+  getRoomsByDate,
+} from "../../queries";
 
 const RenterResultCard = (props) => {
-
-  const history = useHistory()
+  const history = useHistory();
   const navigateToBookings = () => {
-    createBooking({ variables: createTestObject()})
-    history.push("/dashboard")
-  }
+    createBooking({ variables: createTestObject() });
+    history.push("/dashboard");
+  };
 
   const [createBooking] = useMutation(createNewBooking, {
-    refetchQueries:[{
-      query:getBookingsForMusician(2)}, {query:getRoomsByDate(props.date)}]
-  })
+    refetchQueries: [
+      {
+        query: getBookingsForMusician(2),
+      },
+      { query: getRoomsByDate(props.date) },
+    ],
+  });
   const createTestObject = () => {
-    return {date: `${props.date}`, musicianId: "2", roomId: `${props.id}`}
-  }
-
+    return { date: `${props.date}`, musicianId: "2", roomId: `${props.id}` };
+  };
 
   return (
     <div className="result-card">
@@ -35,21 +41,22 @@ const RenterResultCard = (props) => {
                 Available Instruments:
               </p>
               <p className="card-text instrument-text">
-                {props.availableInstruments}
+                {props.availableInstruments.charAt(0).toUpperCase() +
+                  props.availableInstruments.slice(1)}
               </p>
             </div>
           </div>
           <div className="info-container">
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
-              <p className="card-text amenities-text">{props.amenities}</p>
+              <p className="card-text amenities-text">
+                {props.amenities.charAt(0).toUpperCase() +
+                  props.amenities.slice(1)}
+              </p>
             </div>
           </div>
           <div className="info-container">
-            <div className="top-info">
-              <p className="card-title ratings-title">Ratings:</p>
-              <p className="card-text ratings-text">{props.rating}</p>
-            </div>
+            <div className="top-info"></div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>
               <p className="card-text price-text">${props.price.toFixed(2)}</p>
@@ -64,7 +71,9 @@ const RenterResultCard = (props) => {
                 console.log("the booking is clicked!",loading)
                 createBooking({ variables: createTestObject()})}}>BOOK ROOM</button>
             </Link> */}
-              <button className="book-room-button" onClick={navigateToBookings}>BOOK ROOM</button>
+            <button className="book-room-button" onClick={navigateToBookings}>
+              BOOK ROOM
+            </button>
           </div>
         </div>
       </div>

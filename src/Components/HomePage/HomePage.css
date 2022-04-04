@@ -121,3 +121,11 @@
   text-align: center;
 }
 
+@media screen and (min-device-width: 1px) and (max-device-width: 800px) {
+  .homepage-card,
+  .testimonial-card {
+    width: 80%;
+    min-width: 300px;
+  }
+}
+
