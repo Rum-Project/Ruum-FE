@@ -95,7 +95,7 @@ describe("Musician Music Flow", () => {
       .get(".booking-card")
       .should("exist")
       .get(".house-photo")
-      .should("exist") //Should probably be renamed to room-photo, but don't wanna fux with it until it's a focused task
+      .should("exist") 
       .get(".booking-card-details")
       .should("exist")
       .get(".booking-card-info-and-button-container")
