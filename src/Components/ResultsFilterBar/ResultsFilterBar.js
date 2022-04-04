@@ -51,7 +51,7 @@ const ResultsFilterBar = ({
         <img src={musicIcon} alt="location" className="filter-icon" />
         <div className="filter-instruments">
           <div className="filter-title">
-            <label for="instruments-available">Instruments Available:</label>
+            <label htmlFor="instruments-available">Instruments Available:</label>
           </div>
           <ReactSelect
             id="instruments-available"

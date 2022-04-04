@@ -8,7 +8,7 @@ const getRoomsByDate = (date) => gql`
       photo
       price
       amenities
-      instrumentsdf
+      instruments
       }
   }`;
 
