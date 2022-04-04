@@ -18,11 +18,13 @@ const RenterBookingsContainer = (props) => {
         return 0;
       }
     });
-    return futureBookings.map((booking) => {
+    return futureBookings.length > 0 ? futureBookings.map((booking) => {
       return (
         <RenterBookingCard key={booking.id} id={booking.id} booking={booking} />
       );
-    });
+    }) 
+    :
+    <h3 className="bookings-error-message">No Upcoming Bookings! How will you rehearse?!?!</h3> ;
   };
 
   const getPastBookings = () => {
@@ -41,11 +43,13 @@ const RenterBookingsContainer = (props) => {
         return 0;
       }
     });
-    return pastBookings.map((booking) => {
+    return pastBookings.length > 0 ? pastBookings.map((booking) => {
       return (
         <RenterBookingCard key={booking.id} id={booking.id} booking={booking} />
       );
-    });
+    })
+    : 
+    <h3 className="bookings-error-message">No past bookings! Book your first one today!</h3>;
   };
 
   return (
