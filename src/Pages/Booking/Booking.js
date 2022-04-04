@@ -1,5 +1,6 @@
 import React from 'react'
 import RoomView from '../../Components/RoomView/RoomView'
+import LoadingAnimation from '../../Components/LoadingAnimation/LoadingAnimation'
 import {getIndividualRoom} from "../../queries";
 import {useQuery} from '@apollo/client';
 
@@ -10,7 +11,7 @@ const Booking = (props) => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <LoadingAnimation />
       ) :
       (<RoomView room={data.getRoom} date={props.date}/>
     )}

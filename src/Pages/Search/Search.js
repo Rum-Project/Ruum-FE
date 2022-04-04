@@ -1,6 +1,7 @@
 import React from "react";
 import RenterResultsContainer from "../../Components/RenterResultsContainer/RenterResultsContainer";
 import ResultsFilterBar from "../../Components/ResultsFilterBar/ResultsFilterBar";
+import LoadingAnimation from '../../Components/LoadingAnimation/LoadingAnimation'
 import { getRoomsByDate } from "../../queries";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
@@ -51,7 +52,7 @@ const Search = (props) => {
         sortSelect={sortSelect}
         onSortChange={setSortSelect}
       />
-      {loading ? <h1>Loading...</h1> : <RenterResultsContainer date={props.date} rooms={rooms} />}
+      {loading ? <LoadingAnimation /> : <RenterResultsContainer date={props.date} rooms={rooms} />}
     </>
   );
 };
