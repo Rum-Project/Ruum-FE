@@ -7,3 +7,8 @@ h2 {
 .results-container {
   margin-bottom: 100px;
 }
+
+.bookings-error-message {
+  margin-left: 50px;
+  color: #13505b
+}

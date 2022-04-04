@@ -2,7 +2,7 @@ import "./RenterResultsContainer.css";
 import RenterResultCard from "../RenterResultCard/RenterResultCard";
 
 const RenterResultsContainer = (props) => {
-  return (
+  return props.rooms.length > 0 ?
     <div className="results-container">
       {props.rooms.map((card) => {
         return (
@@ -19,7 +19,8 @@ const RenterResultsContainer = (props) => {
         );
       })}
     </div>
-  );
+   :
+   <h3 className="results-error-message">Sorry, no rooms available that match your search! Consider being less picky!</h3>;
 };
 
 export default RenterResultsContainer;
