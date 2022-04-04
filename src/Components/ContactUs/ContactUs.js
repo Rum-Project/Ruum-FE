@@ -14,7 +14,7 @@ const LandingPage = () => {
       <h1 className="contact-header">FRONT END TEAM:</h1>
       <div className="contacts">
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/C4E03AQEoxoPdyGkaBQ/profile-displayphoto-shrink_800_800/0/1618855561117?e=1654732800&v=beta&t=2-XTWXNyBP29_U-BX57E4NnC7DCkfckJmJt-Z8eNc-w"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4E03AQEoxoPdyGkaBQ/profile-displayphoto-shrink_800_800/0/1618855561117?e=1654732800&v=beta&t=2-XTWXNyBP29_U-BX57E4NnC7DCkfckJmJt-Z8eNc-w"/>
           <div className="contact-title">RANA</div>
           <div className="contact-underline"></div>
           <Link
@@ -28,7 +28,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/C4D03AQFkAZa0ZQ9wtQ/profile-displayphoto-shrink_800_800/0/1635880725659?e=1654732800&v=beta&t=GrXfPwhw8Q2P7IYlVvS3KprNBiMzTnxfvSdHQ4jM5_M"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4D03AQFkAZa0ZQ9wtQ/profile-displayphoto-shrink_800_800/0/1635880725659?e=1654732800&v=beta&t=GrXfPwhw8Q2P7IYlVvS3KprNBiMzTnxfvSdHQ4jM5_M"/>
           <div className="contact-title">DANIEL</div>
           <div className="contact-underline"></div>
           <Link
@@ -47,7 +47,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/C4D03AQFxYbe9-XLToA/profile-displayphoto-shrink_800_800/0/1635880039181?e=2147483647&v=beta&t=4KSzkTs-7c4FIFzwYZ4Iy_idITaYak-YsAZIuUx4zYg"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4D03AQFxYbe9-XLToA/profile-displayphoto-shrink_800_800/0/1635880039181?e=2147483647&v=beta&t=4KSzkTs-7c4FIFzwYZ4Iy_idITaYak-YsAZIuUx4zYg"/>
           <div className="contact-title">TONY</div>
           <div className="contact-underline"></div>
           <Link
@@ -64,7 +64,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/D4E35AQFSeBMH27i8Pg/profile-framedphoto-shrink_800_800/0/1647618329734?e=1649192400&v=beta&t=sPZd2pB5NZcKm_4TuJS4cxXG9XNVqVXo_ZKLSV5yYxw"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4E35AQFSeBMH27i8Pg/profile-framedphoto-shrink_800_800/0/1647618329734?e=1649192400&v=beta&t=sPZd2pB5NZcKm_4TuJS4cxXG9XNVqVXo_ZKLSV5yYxw"/>
           <div className="contact-title">THOMAS</div>
           <div className="contact-underline"></div>
           <Link
@@ -84,7 +84,7 @@ const LandingPage = () => {
       <h1 className="contact-header">BACK END TEAM:</h1>
       <div className="contacts">
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/D4D35AQHJ9QWQbZ6FOg/profile-framedphoto-shrink_800_800/0/1644602744991?e=1649192400&v=beta&t=J5tcL1eKiftNN18MaC75H4lq7NJpT1gialTt26wjHGE"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQHJ9QWQbZ6FOg/profile-framedphoto-shrink_800_800/0/1644602744991?e=1649192400&v=beta&t=J5tcL1eKiftNN18MaC75H4lq7NJpT1gialTt26wjHGE"/>
           <div className="contact-title">Hannah</div>
           <div className="contact-underline"></div>
           <Link
@@ -101,7 +101,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/D4E35AQH9TLsljNOggg/profile-framedphoto-shrink_800_800/0/1648052201230?e=1649192400&v=beta&t=BFpNeWFbr6xhzZXPCl1FnUYIOSLY9ATCHm2ACUXxovY"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4E35AQH9TLsljNOggg/profile-framedphoto-shrink_800_800/0/1648052201230?e=1649192400&v=beta&t=BFpNeWFbr6xhzZXPCl1FnUYIOSLY9ATCHm2ACUXxovY"/>
           <div className="contact-title">Chris</div>
           <div className="contact-underline"></div>
           <Link
@@ -120,7 +120,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/D4D35AQGAeTVb7NBvDg/profile-framedphoto-shrink_800_800/0/1644619683925?e=1649192400&v=beta&t=IJ8-7JX80d6S7Qxb5X8y54SLTHETQxGFWPIOSIl8Chc"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQGAeTVb7NBvDg/profile-framedphoto-shrink_800_800/0/1644619683925?e=1649192400&v=beta&t=IJ8-7JX80d6S7Qxb5X8y54SLTHETQxGFWPIOSIl8Chc"/>
           <div className="contact-title">David</div>
           <div className="contact-underline"></div>
           <Link
@@ -134,7 +134,7 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact Photo" src="https://media-exp1.licdn.com/dms/image/D4D35AQFgMdAp3uEh9w/profile-framedphoto-shrink_800_800/0/1646163865427?e=1649192400&v=beta&t=YoVaX-v-czev1vtJsM6pzM8btH2_FXjhbFcAi2HkDH0"/>
+          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQFgMdAp3uEh9w/profile-framedphoto-shrink_800_800/0/1646163865427?e=1649192400&v=beta&t=YoVaX-v-czev1vtJsM6pzM8btH2_FXjhbFcAi2HkDH0"/>
           <div className="contact-title">Jackson</div>
           <div className="contact-underline"></div>
           <Link
