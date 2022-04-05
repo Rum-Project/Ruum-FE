@@ -1,5 +1,3 @@
-import roomcardFixture from "../../cypress/fixtures/roomcardFixture.json";
-import roomDetailsFixture from "../../cypress/fixtures/roomDetailsFixture.json";
 // Utility to match GraphQL mutation based on the operation name
 export const hasOperationName = (req, operationName) => {
   const { body } = req;
@@ -21,12 +19,12 @@ export const aliasQuery = (req, operationName, fixture) => {
 };
 
 // Alias mutation if operationName matches
-export const aliasMutation = (req, operationName) => {
+export const aliasMutation = (req, operationName, fixture) => {
   if (
     req.body.hasOwnProperty("mutation") &&
     req.body.query.includes(operationName)
   ) {
-    req.body.variables.id = 1;
+    // req.body.variables.id = 1;
     req.alias = operationName;
     req.reply({ statusCode: 200, fixture: fixture });
   }

@@ -6,9 +6,8 @@ import { useHistory } from "react-router-dom";
 
 const Login = (props) => {
   const history = useHistory();
-  console.log(history)
   const[signInMusician, { data,loading, error, called}] = useMutation(login, {
-    onCompleted: (signInMusician) => {
+    onCompleted: () => {
         console.log("on Complete", loading, error, data, called)
       },
     onError: () => {
@@ -21,11 +20,14 @@ const Login = (props) => {
     e.preventDefault()
     const userInfo = {email: email, password: password}
     signInMusician({variables: userInfo})
-    .then(response => props.setUserId(response.data.signInMusician.musician.id))
-    setEmail("")
-    setPassword("")
-    history.goBack()
-  }
+    .then(response => {
+      console.log(response)
+      props.setUserId(response.data.signInMusician.musician.id)})
+      console.log(userInfo)
+      setEmail("")
+      setPassword("")
+      history.goBack()
+    }
 
   
 
@@ -37,10 +39,10 @@ const Login = (props) => {
         <div className="login-underline"></div>
         <div className="login-input-fields">
           <p className="login-input-title">Email</p>
-          <input className="input-field" type="text" onChange={e => setEmail(e.target.value)} required></input>
+          <input className="input-field username" type="text" onChange={e => setEmail(e.target.value)} required></input>
           <div className="login-field-underline"></div>
           <p className="login-input-title">Password</p>
-          <input className="input-field" type="password"  onChange={e => setPassword(e.target.value)} required></input>
+          <input className="input-field user-password" type="password"  onChange={e => setPassword(e.target.value)} required></input>
           <div className="login-field-underline"></div>
         </div>
         <button className="login-button" onClick={(e) => handleSubmit(e)}>Login</button>
