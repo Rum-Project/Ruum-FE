@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Home from "./Pages/Home/Home.js";
 import Search from "./Pages/Search/Search.js";
 import Booking from "./Pages/Booking/Booking.js";
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import Profile from "./Pages/Profile/Profile.js";
-import Login from "./Components/Login/Login.js";
+import Login from "./Pages/Login/Login.js";
 import CreateNewUser from "./Components/NewUserCreation/NewUserCreation.js";
 import ResetPassword from "./Components/ResetPassword/ResetPassword.js";
 import ContactUs from "./Components/ContactUs/ContactUs.js";
@@ -12,7 +12,6 @@ import Error from "./Pages/Error/Error.js";
 import NavBar from "./Components/Navbar/NavBar.js";
 import Footer from "./Components/Footer/Footer.js";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { useState } from "react";
 import "./App.css";
 
 function App() {
