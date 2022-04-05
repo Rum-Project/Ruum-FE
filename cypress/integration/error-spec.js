@@ -31,14 +31,5 @@ describe('Error Handling Flow', () => {
       .get('.results-error-message').should('have.text', 'Sorry, no rooms available that match your search! Consider being less picky!')
   })
 
-  // it('should handle failed individual room queries', () => {
-  //   cy.intercept(
-  //     'POST',
-  //     'https://powerful-lake-27669.herokuapp.com/graphql',
-  //     (req) => {
-  //       aliasQuery(req, 'getRoom', 'emptyRoomDetailsFixture.json')
-  //     }
-  //   )
-  //     .visit('http://localhost:3000/booking/1')
-  // })
+  
 })
