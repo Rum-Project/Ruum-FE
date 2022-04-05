@@ -5,6 +5,7 @@ import LoadingAnimation from "../../Components/LoadingAnimation/LoadingAnimation
 import { getRoomsByDate } from "../../queries";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
+import Error from '../Error/Error'
 
 const Search = (props) => {
   // const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
@@ -45,7 +46,7 @@ const Search = (props) => {
     if (loading) {
       return <LoadingAnimation />
     } else if (error) {
-      return <h3 className="results-error-message">Ruh roh, something went wrong on our end, please try again!</h3>
+      return <Error />
     } else {
       return <RenterResultsContainer date={props.date} rooms={rooms} />
     }

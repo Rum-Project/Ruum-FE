@@ -15,7 +15,7 @@ const NavBar = () => {
         <Link to="/search">
           <div className="navigation-link">Search</div>
         </Link>
-        <Link to="/profile">
+        <Link to="/login">
           <img className="profilepic" src={profileIcon} alt="profile-pic" />
         </Link>
       </div>

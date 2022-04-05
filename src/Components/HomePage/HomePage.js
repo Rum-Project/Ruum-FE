@@ -19,22 +19,22 @@ const LandingPage = () => {
       </div>
       <div className="testimonials">
         <div className="testimonial-card">
-          <div className="testimonial-photo" alt="Testimonial Photo"></div>
-          <div className="testimonial-title">BOB</div>
+          <div className="testimonial-photo-1" alt="Testimonial Photo"></div>
+          <div className="testimonial-title">Nigel</div>
           <div className="testimonial-underline"></div>
-          <div className="testimonial-quote">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div className="testimonial-quote">Rüm absolutely changed the game for my band. We used to get, 2-3 gigs a year! Thanks to Rüm, meow we're up to 3 or 4!</div>
         </div>
         <div className="testimonial-card">
-          <div className="testimonial-photo" alt="Testimonial Photo"></div>
+          <div className="testimonial-photo-2" alt="Testimonial Photo"></div>
           <div className="testimonial-title">SHARON</div>
           <div className="testimonial-underline"></div>
-          <div className="testimonial-quote">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div className="testimonial-quote">Rüm has been PAWsitively life-changing. I ain't kitten around when I say you should try it right meow!!</div>
         </div>
         <div className="testimonial-card">
-          <div className="testimonial-photo" alt="Testimonial Photo"></div>
+          <div className="testimonial-photo-3" alt="Testimonial Photo"></div>
           <div className="testimonial-title">FRANK</div>
           <div className="testimonial-underline"></div>
-          <div className="testimonial-quote">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div className="testimonial-quote">I'm so fur-tunate to have found this app! Rüm whiskered me away! All this extra practice has us feline like a new band!</div>
         </div>
       </div>
       <div className="homepage-info">
