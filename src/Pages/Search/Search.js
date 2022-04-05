@@ -54,7 +54,7 @@ const Search = (props) => {
 
   return (
     <>
-      <label for="search">
+      <label htmlFor="search">
         <ResultsFilterBar
           date={props.date}
           setDate={props.setDate}

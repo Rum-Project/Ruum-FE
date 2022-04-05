@@ -30,7 +30,14 @@ function App() {
           path="/booking/:id"
           render={({ match }) => <Booking id={match.params.id} date={date} userId={userId}/>}
         />
-        <Route exact path="/dashboard" render={() => <Dashboard userId={userId}/>} />
+        <Route exact path="/dashboard" render={() => {
+        return (
+          userId ?
+          <Dashboard userId={userId}/>
+          :
+          <Redirect to="/login"/>
+        )
+        }} />
         <Route
           exact
           path="/profile"

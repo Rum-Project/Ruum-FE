@@ -6,12 +6,18 @@ import {
   getBookingsForMusician,
   getRoomsByDate,
 } from "../../queries";
+import { Redirect } from "react-router-dom";
 
 const RenterResultCard = (props) => {
   const history = useHistory();
   const navigateToBookings = () => {
-    createBooking({ variables: createTestObject() });
-    history.push("/dashboard");
+    if (props.userId) {
+      createBooking({ variables: createTestObject() });
+      history.push("/dashboard");
+    } else {
+      history.push("/login")
+    }
+    
   };
 
   const [createBooking] = useMutation(createNewBooking, {

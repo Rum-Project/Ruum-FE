@@ -35,7 +35,7 @@ const ResultsFilterBar = ({
         <img src={calendarIcon} alt="location" className="filter-icon" />
         <div className="filter-date">
           <div className="filter-title">
-            <label for="date">Select a date:</label>
+            <label htmlFor="date">Select a date:</label>
           </div>
           <input
             type="date"
@@ -71,7 +71,7 @@ const ResultsFilterBar = ({
         <img src={amenitiesIcon} alt="location" className="filter-icon" />
         <div className="filter-amenities">
           <div className="filter-title">
-            <label for="amenities-available">Amenities Available:</label>
+            <label htmlFor="amenities-available">Amenities Available:</label>
           </div>
           <ReactSelect
             id="amenities-available"
@@ -92,7 +92,7 @@ const ResultsFilterBar = ({
         <img src={filterIcon} alt="location" className="filter-icon" />
         <div className="filter-sort">
           <div className="filter-title">
-          <label for="sort-by-price">Sort By:</label>
+          <label htmlFor="sort-by-price">Sort By:</label>
           </div>
           <ReactSelect
             id="sort-by-price"

@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "../Login/Login.css";
 import { useMutation } from "@apollo/client";
 import { login } from "../../queries";
+import { useHistory } from "react-router-dom";
 
 const Login = (props) => {
+  const history = useHistory();
+  console.log(history)
   const[signInMusician, { data,loading, error, called}] = useMutation(login, {
     onCompleted: (signInMusician) => {
         console.log("on Complete", loading, error, data, called)
@@ -19,9 +22,9 @@ const Login = (props) => {
     const userInfo = {email: email, password: password}
     signInMusician({variables: userInfo})
     .then(response => props.setUserId(response.data.signInMusician.musician.id))
-    // .then(response => console.log(response.data.signInMusician.musician.id))
     setEmail("")
     setPassword("")
+    history.goBack()
   }
 
   
