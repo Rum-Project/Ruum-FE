@@ -4,13 +4,13 @@ import { useMutation } from "@apollo/client";
 import { createNewBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
 
-const RoomView = ({ room, date }) => {
+const RoomView = ({ room, date, userId }) => {
   const [createBooking] = useMutation(createNewBooking, {
     refetchQueries:[{
-      query:getBookingsForMusician(2)}, {query:getRoomsByDate(date)}]
+      query:getBookingsForMusician(userId)}, {query:getRoomsByDate(date)}]
   })
   const createTestObject = () => {
-    return {date: `${date}`, musicianId: "2", roomId: `${room.id}`}
+    return {date: `${date}`, musicianId: `${userId}`, roomId: `${room.id}`}
   }
 
   return (

@@ -14,7 +14,7 @@ const Booking = (props) => {
     } else if (error) {
       return <Error />
     } else {
-      return <RoomView room={data.getRoom} date={props.date}/>
+      return <RoomView room={data.getRoom} date={props.date} userId={props.userId}/>
     }
   }
 

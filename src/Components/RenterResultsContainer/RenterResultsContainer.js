@@ -15,6 +15,7 @@ const RenterResultsContainer = (props) => {
             amenities={card.amenities}
             price={card.price}
             id={card.id}
+            userId={props.userId}
           />
         );
       })}

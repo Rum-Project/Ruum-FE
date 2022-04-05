@@ -17,14 +17,15 @@ const RenterResultCard = (props) => {
   const [createBooking] = useMutation(createNewBooking, {
     refetchQueries: [
       {
-        query: getBookingsForMusician(2),
+        query: getBookingsForMusician(props.userId),
       },
       { query: getRoomsByDate(props.date) },
     ],
   });
   const createTestObject = () => {
-    return { date: `${props.date}`, musicianId: "2", roomId: `${props.id}` };
+    return { date: `${props.date}`, musicianId: `${props.userId}`, roomId: `${props.id}` };
   };
+  console.log("user Id",props.userId)
 
   return (
     <div className="result-card">

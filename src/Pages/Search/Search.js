@@ -48,7 +48,7 @@ const Search = (props) => {
     } else if (error) {
       return <Error />
     } else {
-      return <RenterResultsContainer date={props.date} rooms={rooms} />
+      return <RenterResultsContainer date={props.date} rooms={rooms} userId={props.userId} />
     }
   }
 

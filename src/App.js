@@ -16,26 +16,27 @@ import "./App.css";
 
 function App() {
   const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON().slice(0,10));
+  const [userId, setUserId] = useState(null)
 
   return (
     <main className="App">
       <NavBar />
       <Switch>
         <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/search" render={() => <Search date={date} setDate={setDate}/>} />
+        <Route exact path="/search" render={() => <Search date={date} setDate={setDate} userId={userId}/>} />
 
         <Route
           exact
           path="/booking/:id"
-          render={({ match }) => <Booking id={match.params.id} date={date}/>}
+          render={({ match }) => <Booking id={match.params.id} date={date} userId={userId}/>}
         />
-        <Route exact path="/dashboard" render={() => <Dashboard />} />
+        <Route exact path="/dashboard" render={() => <Dashboard userId={userId}/>} />
         <Route
           exact
           path="/profile"
           render={({ match }) => <Profile id={match.params.id} />}
         />
-        <Route exact path="/login" render={() => <Login />} />
+        <Route exact path="/login" render={() => <Login setUserId={setUserId}/>} />
         <Route exact path="/create-user" render={() => <CreateNewUser />} />
         <Route exact path="/reset-password" render={() => <ResetPassword />} />
         <Route exact path="/contact-us" render={() => <ContactUs />} />
