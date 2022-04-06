@@ -28,7 +28,7 @@ const Login = (props) => {
         props.setUserId(response.data.signInMusician.musician.id)
         setEmail("")
         setPassword("")
-        history.goBack()
+        history.push('/search')
       }
     })
   }

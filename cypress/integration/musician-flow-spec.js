@@ -40,9 +40,9 @@ describe("Musician Music Flow", () => {
       .get(".top-info")
       .should("exist")
       .get(".bottom-info")
-      .should("exist") //
+      .should("exist") 
       .get(".info-container")
-      .should("exist") //
+      .should("exist") 
       .get(".room-title")
       .first()
       .should("have.text", "Crungalow Studios")
