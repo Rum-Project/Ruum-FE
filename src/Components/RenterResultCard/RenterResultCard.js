@@ -6,7 +6,6 @@ import {
   getBookingsForMusician,
   getRoomsByDate,
 } from "../../queries";
-import { Redirect } from "react-router-dom";
 
 const RenterResultCard = (props) => {
   const history = useHistory();
@@ -15,9 +14,8 @@ const RenterResultCard = (props) => {
       createBooking({ variables: createTestObject() });
       history.push("/dashboard");
     } else {
-      history.push("/login")
+      history.push("/login");
     }
-    
   };
 
   const [createBooking] = useMutation(createNewBooking, {
@@ -29,9 +27,13 @@ const RenterResultCard = (props) => {
     ],
   });
   const createTestObject = () => {
-    return { date: `${props.date}`, musicianId: `${props.userId}`, roomId: `${props.id}` };
+    return {
+      date: `${props.date}`,
+      musicianId: `${props.userId}`,
+      roomId: `${props.id}`,
+    };
   };
-  console.log("user Id",props.userId)
+  console.log("user Id", props.userId);
 
   return (
     <div className="result-card">
@@ -64,10 +66,10 @@ const RenterResultCard = (props) => {
           <div className="info-container">
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
-                <p className="card-text amenities-text">
-                  {props.amenities.charAt(0).toUpperCase() +
-                    props.amenities.slice(1)}
-                </p>
+              <p className="card-text amenities-text">
+                {props.amenities.charAt(0).toUpperCase() +
+                  props.amenities.slice(1)}
+              </p>
             </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>
