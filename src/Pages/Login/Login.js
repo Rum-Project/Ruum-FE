@@ -16,20 +16,24 @@ const Login = (props) => {
   })
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
+  const [errorMsg, setErrorMsg] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault()
     const userInfo = {email: email, password: password}
     signInMusician({variables: userInfo})
     .then(response => {
-      console.log(response)
-      props.setUserId(response.data.signInMusician.musician.id)})
-      console.log(userInfo)
-      setEmail("")
-      setPassword("")
-      history.goBack()
-    }
+      if(response.errors){
+        setErrorMsg("Invalid email or password. Please try again")
+      }else{
+        props.setUserId(response.data.signInMusician.musician.id)
+        setEmail("")
+        setPassword("")
+        history.goBack()
+      }
+    })
+  }
 
-  
+
 
   return(
     <section className="login-container">
@@ -44,6 +48,7 @@ const Login = (props) => {
           <p className="login-input-title">Password</p>
           <input className="input-field user-password" type="password"  onChange={e => setPassword(e.target.value)} required></input>
           <div className="login-field-underline"></div>
+          <p>{errorMsg}</p>
         </div>
         <button className="login-button" onClick={(e) => handleSubmit(e)}>Login</button>
         <div className="login-links">
