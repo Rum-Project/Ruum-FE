@@ -1,4 +1,3 @@
-
 import { aliasQuery } from "../../src/Utils/graphql-test-utils";
 
 describe("Error Handling Flow", () => {
@@ -9,18 +8,18 @@ describe("Error Handling Flow", () => {
       .get(".error-gif")
       .should("exist");
   });
-  
-// Sad Path testing, broken due to stubbing issues
 
   // it.only("should handle situations with no bookings", () => {
   //   cy.intercept(
   //     "POST",
   //     "https://powerful-lake-27669.herokuapp.com/graphql",
   //     (req) => {
-  //       aliasQuery(req, "getMusicianBookings", "emptyBookingsFixture.json");
+  //       aliasQuery(req, "getMusicianBookings", "loginFixture.json");
+  //       aliasMutation(req, "signInMusician", "loginFixture.json");
   //     }
   //   );
   //   cy.visit("http://localhost:3000/search")
+  //   .wait("@getMusicianBookings")
   //     .get(".bookings-link")
   //     .click()
   //     .get(".username")
@@ -29,13 +28,9 @@ describe("Error Handling Flow", () => {
   //     .type("password")
   //     .get(".login-button")
   //     .click()
+  //     .wait("@signInMusician")
   //     .get(".bookings-link")
   //     .click()
-  //     .get(".username")
-  //     .type("bruce@mail.com")
-  //     .get(".user-password")
-  //     .type("password")
-  //     .get(".login-button")
   //     .get(".bookings-error-message")
   //     .should(
   //       "have.text",
@@ -48,7 +43,7 @@ describe("Error Handling Flow", () => {
   //     "POST",
   //     "https://powerful-lake-27669.herokuapp.com/graphql",
   //     (req) => {
-  //       aliasQuery(req, "getAvailableRooms", "fakeFixture.json");
+  //       aliasQuery(req, "getAvailableRooms", "loginFixture.json");
   //     }
   //   )
   //     .visit("http://localhost:3000/search")
@@ -59,4 +54,3 @@ describe("Error Handling Flow", () => {
   //     );
   // });
 });
-

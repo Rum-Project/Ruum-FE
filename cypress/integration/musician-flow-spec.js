@@ -12,14 +12,16 @@ describe("Musician Music Flow", () => {
         aliasMutation(req, "signInMusician", "loginFixture.json");
       }
     );
-    cy.visit("http://localhost:3000/");
-    cy.visit("http://localhost:3000/login")
+    cy.visit("http://localhost:3000/")
+      .get(".profilepic")
+      .click()
       .get(".username")
       .type("bruce@mail.com")
       .get(".user-password")
       .type("password")
       .get(".login-button")
       .click()
+      .wait("@signInMusician")
       .get(".search-link")
       .click()
       // THIS IS THE INITIAL START OF THE TEST
@@ -90,24 +92,6 @@ describe("Musician Music Flow", () => {
       .get(".price-text")
       .first()
       .should("have.text", "$152.95")
-      .get(".book-now-button")
-      .click()
-      .get(".username")
-      .type("bruce@mail.com")
-      .get(".user-password")
-      .type("password")
-      .get(".login-button")
-      .click()
-      .get(".book-now-button")
-      .click()
-      .get(".username")
-      .type("bruce@mail.com")
-      .get(".user-password")
-      .type("password")
-      .get(".login-button")
-      .click()
-      .url()
-      .should("eq", "http://localhost:3000/booking/1")
       .get(".book-now-button")
       .click()
 

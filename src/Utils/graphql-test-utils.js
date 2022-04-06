@@ -21,7 +21,7 @@ export const aliasQuery = (req, operationName, fixture) => {
 // Alias mutation if operationName matches
 export const aliasMutation = (req, operationName, fixture) => {
   if (
-    req.body.hasOwnProperty("mutation") &&
+    req.body.hasOwnProperty("query") &&
     req.body.query.includes(operationName)
   ) {
     // req.body.variables.id = 1;
