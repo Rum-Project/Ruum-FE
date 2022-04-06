@@ -59,12 +59,13 @@ Coming soon...
 
 ## Future Goals
 
-- Log in capabilities
 - Room owner access and functionality
 
 ## Stretch Goals
 
 - GraphQL ✅
+- Apollo Client ✅
+
 
 ## Created By:
 
