@@ -51,10 +51,11 @@ describe("Musician Music Flow", () => {
       .should("have.text", "Available Instruments:")
       .get(".button-container")
       .should("exist")
+      .get('.more-details-button')
       .first()
       .click()
 
-      // Details view
+      // // Details view
 
       .wait("@getRoom")
       .get(".detailed-view-container")
