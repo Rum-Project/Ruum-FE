@@ -1,4 +1,4 @@
-import { aliasQuery } from "../../src/Utils/graphql-test-utils";
+import { aliasQuery, aliasMutation } from "../../src/Utils/graphql-test-utils";
 
 describe("Error Handling Flow", () => {
   it("should adequately 404 error", () => {
