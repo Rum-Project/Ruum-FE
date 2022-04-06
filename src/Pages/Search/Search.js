@@ -16,7 +16,6 @@ const Search = (props) => {
     value: "High-to-Low",
     label: "Cost High-to-Low",
   });
-  console.log(error)
 
   let rooms = [];
   if (!loading && !error) {

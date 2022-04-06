@@ -9,6 +9,8 @@ describe("Error Handling Flow", () => {
       .get(".error-gif")
       .should("exist");
   });
+  
+// Sad Path testing, broken due to stubbing issues
 
   // it.only("should handle situations with no bookings", () => {
   //   cy.intercept(
