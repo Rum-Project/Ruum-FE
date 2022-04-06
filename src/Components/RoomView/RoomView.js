@@ -1,23 +1,28 @@
 import "./RoomView.css";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { createNewBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
 
-const RoomView = ({ room, date }) => {
-
-  // const navigateToBookings = () => {
-  //   createBooking({ variables: createTestObject()})
-  // }
-
+const RoomView = ({ room, date, userId }) => {
+  const history = useHistory();
   const [createBooking] = useMutation(createNewBooking, {
     refetchQueries:[{
-      query:getBookingsForMusician(2)}, {query:getRoomsByDate(date)}]
+      query:getBookingsForMusician(userId)}, {query:getRoomsByDate(date)}]
   })
   const createTestObject = () => {
-    return {date: `${date}`, musicianId: "2", roomId: `${room.id}`}
+    return {date: `${date}`, musicianId: `${userId}`, roomId: `${room.id}`}
   }
-  
+
+  const handleButtonClick = () => {
+    if (userId) {
+      createBooking({ variables: createTestObject()})
+      history.push('/dashboard')
+    } else {
+      history.push('/login')
+    }
+  }
+
   return (
     <>
       <div className="detailed-view-container">
@@ -70,9 +75,9 @@ const RoomView = ({ room, date }) => {
               </div>
             </div>
 
-            <Link to="/dashboard">
-              <button className="book-now-button" onClick={() => createBooking({ variables: createTestObject()})}>BOOK NOW</button>
-            </Link>
+            {/* <Link to="/dashboard"> */}
+              <button className="book-now-button" onClick={() => handleButtonClick()}>BOOK NOW</button>
+            {/* </Link> */}
           </div>
         </div>
       </div>

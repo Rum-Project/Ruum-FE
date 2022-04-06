@@ -2,7 +2,7 @@ import "./RenterBookingCard.css";
 import { useMutation } from "@apollo/client";
 import { deleteBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
-const RenterBookingCard = ({ booking }) => {
+const RenterBookingCard = ({ booking, userId }) => {
   // const formatDate = (date) => {
   //   return new Date(date).toLocaleDateString("en-us");
   // };
@@ -11,7 +11,7 @@ const RenterBookingCard = ({ booking }) => {
   }
   const [destroyBooking] = useMutation(deleteBooking, {
     refetchQueries:[{
-      query:getBookingsForMusician(2)}, {query:getRoomsByDate(booking.date.slice(0,10))}]
+      query:getBookingsForMusician(userId)}, {query:getRoomsByDate(booking.date.slice(0,10))}]
   })
   const createDelete = () => {
     return {bookingId: `${booking.id}`}

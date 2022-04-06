@@ -31,7 +31,7 @@ const getIndividualRoom = (id) => gql`
   }`;
 
 const getBookingsForMusician = (musicianId) => gql`
-  { 
+  {
     getMusicianBookings(id: "${musicianId}")
         {
           id
@@ -85,10 +85,23 @@ const deleteBooking = gql`
   }
 `;
 
+const login = gql`
+mutation Login($email: String!, $password: String!){
+  signInMusician(
+    input: {credentials: {email: $email, password: $password}}
+    ) {
+    musician {
+      id
+      }
+    }
+  }
+`;
+
 export {
   getRoomsByDate,
   getIndividualRoom,
   getBookingsForMusician,
   createNewBooking,
   deleteBooking,
+  login
 };

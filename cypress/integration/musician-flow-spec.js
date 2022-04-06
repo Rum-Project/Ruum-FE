@@ -1,21 +1,41 @@
 import { aliasQuery, aliasMutation } from "../../src/Utils/graphql-test-utils";
 
 describe("Musician Music Flow", () => {
-  beforeEach(() => {
+  // beforeEach(() => {
+  // cy.intercept(
+  //   "POST",
+  //   "https://powerful-lake-27669.herokuapp.com/graphql",
+  //   (req) => {
+  //     aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
+  //     aliasQuery(req, "getRoom", "roomDetailsFixture.json");
+  //     aliasQuery(req, "getMusicianBookings", "bookingsFixture.json")
+
+  //     // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
+  //   }
+  // );
+  // });
+  it("On load the musician should see a list of room cards", () => {
     cy.intercept(
       "POST",
       "https://powerful-lake-27669.herokuapp.com/graphql",
       (req) => {
         aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
         aliasQuery(req, "getRoom", "roomDetailsFixture.json");
-        aliasQuery(req, "getMusicianBookings", "bookingsFixture.json")
-
-        // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
+        aliasQuery(req, "getMusicianBookings", "bookingsFixture.json");
+        aliasMutation(req, "signInMusician", "loginFixture.json");
       }
     );
-  });
-  it("On load the musician should see a list of room cards", () => {
-    cy.visit("http://localhost:3000/search")
+    cy.visit("http://localhost:3000/");
+    cy.visit("http://localhost:3000/login")
+      .get(".username")
+      .type("bruce@mail.com")
+      .get(".user-password")
+      .type("password")
+      .get(".login-button")
+      .click()
+      .get(".search-link")
+      .click()
+      // THIS IS THE INITIAL START OF THE TEST
       .get(".results-container")
       .should("exist")
       .get(".result-card")
@@ -86,6 +106,22 @@ describe("Musician Music Flow", () => {
       .should("have.text", "$152.95")
       .get(".book-now-button")
       .click()
+      .get(".username")
+      .type("bruce@mail.com")
+      .get(".user-password")
+      .type("password")
+      .get(".login-button")
+      .click()
+      .get(".book-now-button")
+      .click()
+      .get(".username")
+      .type("bruce@mail.com")
+      .get(".user-password")
+      .type("password")
+      .get(".login-button")
+      .click()
+      .get(".book-now-button")
+      .click()
 
       // Bookings View
       .url()
@@ -95,7 +131,7 @@ describe("Musician Music Flow", () => {
       .get(".booking-card")
       .should("exist")
       .get(".house-photo")
-      .should("exist") 
+      .should("exist")
       .get(".booking-card-details")
       .should("exist")
       .get(".booking-card-info-and-button-container")

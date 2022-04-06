@@ -10,21 +10,30 @@ import {
 const RenterResultCard = (props) => {
   const history = useHistory();
   const navigateToBookings = () => {
-    createBooking({ variables: createTestObject() });
-    history.push("/dashboard");
+    if (props.userId) {
+      createBooking({ variables: createTestObject() });
+      history.push("/dashboard");
+    } else {
+      history.push("/login");
+    }
   };
 
   const [createBooking] = useMutation(createNewBooking, {
     refetchQueries: [
       {
-        query: getBookingsForMusician(2),
+        query: getBookingsForMusician(props.userId),
       },
       { query: getRoomsByDate(props.date) },
     ],
   });
   const createTestObject = () => {
-    return { date: `${props.date}`, musicianId: "2", roomId: `${props.id}` };
+    return {
+      date: `${props.date}`,
+      musicianId: `${props.userId}`,
+      roomId: `${props.id}`,
+    };
   };
+  console.log("user Id", props.userId);
 
   return (
     <div className="result-card">
@@ -57,10 +66,10 @@ const RenterResultCard = (props) => {
           <div className="info-container">
             <div className="top-info">
               <p className="card-title amenities-title">Amenities:</p>
-                <p className="card-text amenities-text">
-                  {props.amenities.charAt(0).toUpperCase() +
-                    props.amenities.slice(1)}
-                </p>
+              <p className="card-text amenities-text">
+                {props.amenities.charAt(0).toUpperCase() +
+                  props.amenities.slice(1)}
+              </p>
             </div>
             <div className="bottom-info">
               <p className="card-title price-title">Price:</p>

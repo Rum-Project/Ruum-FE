@@ -48,13 +48,13 @@ const Search = (props) => {
     } else if (error) {
       return <Error />
     } else {
-      return <RenterResultsContainer date={props.date} rooms={rooms} />
+      return <RenterResultsContainer date={props.date} rooms={rooms} userId={props.userId} />
     }
   }
 
   return (
     <>
-      <label for="search">
+      <label htmlFor="search">
         <ResultsFilterBar
           date={props.date}
           setDate={props.setDate}

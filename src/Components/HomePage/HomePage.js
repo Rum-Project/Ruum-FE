@@ -7,14 +7,14 @@ const LandingPage = () => {
       <div className="hero-image">
         <div className="hero-text">
           <h1 className="hero-header">READY TO PLAY LOUD?</h1>
-          <p>RÜM can help you find the best places to practice without the fear of annoying your neighbors... again.</p>
+          <p>RÜM can help you find the best places to practice, without the fear of annoying your neighbors.</p>
           <Link to="search"><button className="call-to-action-button">START SEARCHING</button></Link>
         </div>
       </div>
       <div className="homepage-info">
         <div className="homepage-card">
-        <h2>RÜM pairs musicians with places to transform the world of practicing music.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Revolutionize Your Rehearsal With Rüm</h2>
+        <p>Rüm pairs musicians with the space, community, and support they need to get concert-ready. <br></br>Need a rehearsal space with a piano? Rüm for the whole choir? Soundproofed studio with an engineer? <br></br>We've got you covered.</p>
         </div>
       </div>
       <div className="testimonials">
