@@ -42,6 +42,11 @@ To install this project, please see below:
 
 Alternatively, you can access the deployed site [HERE](https://ruumproject.herokuapp.com/)
 
+To access the log in, please use the following credentials:
+```
+  - username: bruce@mail.com
+  - password: password
+```
 ## Features
 
 - View all available booking for a given date
@@ -52,14 +57,32 @@ Alternatively, you can access the deployed site [HERE](https://ruumproject.herok
 - 100% Lighthouse Accessibility Ratings on all pages
 - Mobile and Computer friendly responsive design
 - Deployed website
+- Unique routes and error handling for 404, server errors, and more
+- Contact us page featuring all 8 members contact information
 
 ## See the Site in Action!
 
-Coming soon...
+<img width="550" alt="Screen Shot 2022-04-05 at 10 26 38 PM" src="https://user-images.githubusercontent.com/69861203/161883553-59b69bee-05ce-4f96-9b70-9277914966c0.png">
+
+Welcome to Rüm! If you're looking for your next musical practice space, you're in the right place. After perusing the landing page, feel free to search all available rooms (we've got about 20 right now), filter by available instruments, amenities, or cost, view extra room details, and book your next practice space!
+
+![Search and book a room](https://media.giphy.com/media/eqLyBXugYxugWB5br8/giphy.gif)
+
+A user is free to search all rooms and see room details, but if they want to Book a Room or access the Dashboard page, they will be prompted to log in. Please see the [Installation and Set-Up](#installation-and-set-up) section for the credentials.
+
+
+![Login Demo](https://media.giphy.com/media/uTRfm0oLjZJ5rHskyF/giphy.gif)
+
+If a user is interested in seeing all of their past and future bookings, they can navigate to the Dashboard page for a snapshot view of every booking they've made. If either the "upcoming bookings" or the "past bookings" sections are empty, the application will prompt the user to make some new bookings and practice more so that they can make it to Carnegie Hall.  
+
+<img width="550" alt="Screen Shot 2022-04-05 at 10 35 28 PM" src="https://user-images.githubusercontent.com/69861203/161884591-86a9c428-56b0-423d-aea8-888228b1c873.png">
+
 
 ## Future Goals
 
 - Room owner access and functionality
+- Add a map and location options outside of Denver
+- Built in payment method (Stripe?)
 
 ## Stretch Goals
 
