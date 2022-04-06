@@ -92,6 +92,12 @@ If a user is interested in seeing all of their past and future bookings, they ca
 
 ## Created By:
 
+Check out the Contact Us page on the application! 
+
+<img width="550" alt="Screen Shot 2022-04-05 at 10 58 35 PM" src="https://user-images.githubusercontent.com/69861203/161887170-36f12126-9f0f-4168-bc01-eb7ee9d0a99c.png">
+
+...Or search below for links to everyone's GitHub accounts!
+
 Front-End Team:
 
 - [Daniel O'Connell](https://github.com/Daniel-OC)
