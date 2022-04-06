@@ -1,19 +1,6 @@
 import { aliasQuery, aliasMutation } from "../../src/Utils/graphql-test-utils";
 
 describe("Musician Music Flow", () => {
-  // beforeEach(() => {
-  // cy.intercept(
-  //   "POST",
-  //   "https://powerful-lake-27669.herokuapp.com/graphql",
-  //   (req) => {
-  //     aliasQuery(req, "getAvailableRooms", "roomcardFixture.json");
-  //     aliasQuery(req, "getRoom", "roomDetailsFixture.json");
-  //     aliasQuery(req, "getMusicianBookings", "bookingsFixture.json")
-
-  //     // req.reply({ statusCode: 200, fixture: "roomcardFixture.json" });
-  //   }
-  // );
-  // });
   it("On load the musician should see a list of room cards", () => {
     cy.intercept(
       "POST",
@@ -62,7 +49,6 @@ describe("Musician Music Flow", () => {
       .should("have.text", "Available Instruments:")
       .get(".button-container")
       .should("exist")
-      .get(".more-details-button")
       .first()
       .click()
 
@@ -120,6 +106,8 @@ describe("Musician Music Flow", () => {
       .type("password")
       .get(".login-button")
       .click()
+      .url()
+      .should("eq", "http://localhost:3000/booking/1")
       .get(".book-now-button")
       .click()
 
@@ -168,6 +156,6 @@ describe("Musician Music Flow", () => {
       .first()
       .should("have.text", "$37.29")
       .get(".cancel-button")
-      .should("exist"); //THIS NEEDS TO BE CHANGED THE SECOND THAT CANCEL BOOKING DOES ANYTHING
+      .should("exist");
   });
 });

@@ -33,7 +33,6 @@ const RenterResultCard = (props) => {
       roomId: `${props.id}`,
     };
   };
-  console.log("user Id", props.userId);
 
   return (
     <div className="result-card">
@@ -80,11 +79,7 @@ const RenterResultCard = (props) => {
             <Link to={`/booking/${props.id}`}>
               <button className="more-details-button">SEE DETAILS</button>
             </Link>
-            {/* <Link to="/dashboard">
-              <button className="book-room-button" onClick={() => {
-                console.log("the booking is clicked!",loading)
-                createBooking({ variables: createTestObject()})}}>BOOK ROOM</button>
-            </Link> */}
+            
             <button className="book-room-button" onClick={navigateToBookings}>
               BOOK ROOM
             </button>
