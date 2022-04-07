@@ -2,10 +2,8 @@ import "./RenterBookingCard.css";
 import { useMutation } from "@apollo/client";
 import { deleteBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
 
-const RenterBookingCard = ({ booking, userId }) => {
-  // const formatDate = (date) => {
-  //   return new Date(date).toLocaleDateString("en-us");
-  // };
+const RenterBookingCard = ({ booking, userId, cardType }) => {
+  
   const handleClick = () => {
     destroyBooking({variables: createDelete()})
   }
@@ -15,6 +13,14 @@ const RenterBookingCard = ({ booking, userId }) => {
   })
   const createDelete = () => {
     return {bookingId: `${booking.id}`}
+  }
+
+  const checkForButton = () => {
+    if (cardType === "future") {
+      return(
+        <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+      )
+    } 
   }
 
   return (
@@ -56,7 +62,7 @@ const RenterBookingCard = ({ booking, userId }) => {
             </div>
           </div>
           <div className="button-container">
-            <button className="cancel-button" onClick={handleClick}>CANCEL BOOKING</button>
+            {checkForButton()}
           </div>
         </div>
       </div>
