@@ -1,7 +1,6 @@
 import "./RenterBookingCard.css";
 import { useMutation } from "@apollo/client";
 import { deleteBooking, getBookingsForMusician, getRoomsByDate } from "../../queries";
-import { printIntrospectionSchema } from "graphql";
 
 const RenterBookingCard = ({ booking, userId, cardType }) => {
   
