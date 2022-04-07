@@ -24,7 +24,6 @@ export const aliasMutation = (req, operationName, fixture) => {
     req.body.hasOwnProperty("query") &&
     req.body.query.includes(operationName)
   ) {
-    // req.body.variables.id = 1;
     req.alias = operationName;
     req.reply({ statusCode: 200, fixture: fixture });
   }

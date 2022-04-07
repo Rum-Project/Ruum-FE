@@ -6,14 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const Login = (props) => {
   const history = useHistory();
-  const[signInMusician, { data,loading, error, called}] = useMutation(login, {
-    onCompleted: () => {
-        console.log("on Complete", loading, error, data, called)
-      },
-    onError: () => {
-        console.log(error, called)
-      }
-  })
+  const[signInMusician] = useMutation(login)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [errorMsg, setErrorMsg] = useState("")
@@ -23,7 +16,7 @@ const Login = (props) => {
     signInMusician({variables: userInfo})
     .then(response => {
       if(response.errors){
-        setErrorMsg("Invalid email or password. Please try again")
+        setErrorMsg("Invalid email or password. Please try again.")
       }else{
         props.setUserId(response.data.signInMusician.musician.id)
         setEmail("")

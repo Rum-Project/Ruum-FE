@@ -20,7 +20,7 @@ const RenterBookingsContainer = (props) => {
     });
     return futureBookings.length > 0 ? futureBookings.map((booking) => {
       return (
-        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} userId={props.userId}/>
+        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} userId={props.userId} cardType="future"/>
       );
     }) 
     :
@@ -45,7 +45,7 @@ const RenterBookingsContainer = (props) => {
     });
     return pastBookings.length > 0 ? pastBookings.map((booking) => {
       return (
-        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} />
+        <RenterBookingCard key={booking.id} id={booking.id} booking={booking} cardType="past"/>
       );
     })
     : 

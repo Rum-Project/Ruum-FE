@@ -6,7 +6,7 @@ import { useQuery } from "@apollo/client";
 
 
 const Dashboard = (props) => {
-  const {loading, data} = useQuery(getBookingsForMusician(props.userId))//LONGTERM FIGURE OUT HOW TO MAKE THIS DYNAMIC ACCORDING TO LOG IN INFO!
+  const {loading, data} = useQuery(getBookingsForMusician(props.userId))
 
 
   return (

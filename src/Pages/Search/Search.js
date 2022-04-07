@@ -8,7 +8,6 @@ import { useQuery } from "@apollo/client";
 import Error from '../Error/Error'
 
 const Search = (props) => {
-  // const [date, setDate] = useState(new Date(new Date().toLocaleDateString()).toJSON());
   const { loading, data, error } = useQuery(getRoomsByDate(props.date));
   const [availableInstSelect, setAvailableInstSelect] = useState([]);
   const [availableAmenSelect, setAvailableAmenSelect] = useState([]);
@@ -70,6 +69,5 @@ const Search = (props) => {
   );
 };
 
-// make fetch call, setAllRooms to data
 
 export default Search;
