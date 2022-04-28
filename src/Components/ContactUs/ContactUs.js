@@ -1,5 +1,6 @@
 import "../ContactUs/ContactUs.css";
 import { Link } from "react-router-dom";
+import Hannah from "../../Images/hannah.jpeg";
 
 const LandingPage = () => {
   return (
@@ -14,7 +15,11 @@ const LandingPage = () => {
       <h1 className="contact-header">FRONT END TEAM:</h1>
       <div className="contacts">
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4E03AQEoxoPdyGkaBQ/profile-displayphoto-shrink_800_800/0/1618855561117?e=1654732800&v=beta&t=2-XTWXNyBP29_U-BX57E4NnC7DCkfckJmJt-Z8eNc-w"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/C4E03AQEoxoPdyGkaBQ/profile-displayphoto-shrink_800_800/0/1618855561117?e=1654732800&v=beta&t=2-XTWXNyBP29_U-BX57E4NnC7DCkfckJmJt-Z8eNc-w"
+          />
           <div className="contact-title">RANA</div>
           <div className="contact-underline"></div>
           <Link
@@ -28,7 +33,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4D03AQFkAZa0ZQ9wtQ/profile-displayphoto-shrink_800_800/0/1635880725659?e=1654732800&v=beta&t=GrXfPwhw8Q2P7IYlVvS3KprNBiMzTnxfvSdHQ4jM5_M"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQFkAZa0ZQ9wtQ/profile-displayphoto-shrink_800_800/0/1635880725659?e=1654732800&v=beta&t=GrXfPwhw8Q2P7IYlVvS3KprNBiMzTnxfvSdHQ4jM5_M"
+          />
           <div className="contact-title">DANIEL</div>
           <div className="contact-underline"></div>
           <Link
@@ -47,7 +56,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/C4D03AQFxYbe9-XLToA/profile-displayphoto-shrink_800_800/0/1635880039181?e=2147483647&v=beta&t=4KSzkTs-7c4FIFzwYZ4Iy_idITaYak-YsAZIuUx4zYg"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQFxYbe9-XLToA/profile-displayphoto-shrink_800_800/0/1635880039181?e=2147483647&v=beta&t=4KSzkTs-7c4FIFzwYZ4Iy_idITaYak-YsAZIuUx4zYg"
+          />
           <div className="contact-title">TONY</div>
           <div className="contact-underline"></div>
           <Link
@@ -64,7 +77,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4E35AQFSeBMH27i8Pg/profile-framedphoto-shrink_800_800/0/1647618329734?e=1649300400&v=beta&t=xWIiqQP5ktoSLUvrWpXSXh30vINXy6p7IJWkiBf7kNc"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/D4E35AQFSeBMH27i8Pg/profile-framedphoto-shrink_800_800/0/1647618329734?e=1649300400&v=beta&t=xWIiqQP5ktoSLUvrWpXSXh30vINXy6p7IJWkiBf7kNc"
+          />
           <div className="contact-title">THOMAS</div>
           <div className="contact-underline"></div>
           <Link
@@ -84,7 +101,7 @@ const LandingPage = () => {
       <h1 className="contact-header">BACK END TEAM:</h1>
       <div className="contacts">
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQHJ9QWQbZ6FOg/profile-framedphoto-shrink_800_800/0/1644602744991?e=1649300400&v=beta&t=urPRCgOu2FlAU6ghp6RkhgcnLqAbaGUCaETHMVn5B2k"/>
+          <img className="contact-photo" alt="contact" src={Hannah} />
           <div className="contact-title">Hannah</div>
           <div className="contact-underline"></div>
           <Link
@@ -101,7 +118,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4E35AQH9TLsljNOggg/profile-framedphoto-shrink_800_800/0/1648052201230?e=1649300400&v=beta&t=Nc8ALVx81SCz8yQGXn3Vwy37PjGZUBbKAQ0g2gEAtlI"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/D4E35AQH9TLsljNOggg/profile-framedphoto-shrink_800_800/0/1648052201230?e=1649300400&v=beta&t=Nc8ALVx81SCz8yQGXn3Vwy37PjGZUBbKAQ0g2gEAtlI"
+          />
           <div className="contact-title">Chris</div>
           <div className="contact-underline"></div>
           <Link
@@ -120,7 +141,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQGAeTVb7NBvDg/profile-framedphoto-shrink_800_800/0/1644619683925?e=1649300400&v=beta&t=XBOZQw1NuckDU-80s9pVFz3zkPwomX6QgP7f3Rajiog"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/D4D35AQGAeTVb7NBvDg/profile-framedphoto-shrink_800_800/0/1644619683925?e=1649300400&v=beta&t=XBOZQw1NuckDU-80s9pVFz3zkPwomX6QgP7f3Rajiog"
+          />
           <div className="contact-title">David</div>
           <div className="contact-underline"></div>
           <Link
@@ -134,7 +159,11 @@ const LandingPage = () => {
           </Link>
         </div>
         <div className="contact-card">
-          <img className="contact-photo" alt="contact" src="https://media-exp1.licdn.com/dms/image/D4D35AQFgMdAp3uEh9w/profile-framedphoto-shrink_800_800/0/1646163865427?e=1649300400&v=beta&t=zCU1H7nBqfSdDBogwvLDmaQqc3pTbXUuGJF9pxyDj7Q"/>
+          <img
+            className="contact-photo"
+            alt="contact"
+            src="https://media-exp1.licdn.com/dms/image/D4D35AQFgMdAp3uEh9w/profile-framedphoto-shrink_800_800/0/1646163865427?e=1649300400&v=beta&t=zCU1H7nBqfSdDBogwvLDmaQqc3pTbXUuGJF9pxyDj7Q"
+          />
           <div className="contact-title">Jackson</div>
           <div className="contact-underline"></div>
           <Link
